@@ -1,3 +1,8 @@
+<!-- 
+  Modals that are used for login, register etc 
+  Include with: include_once("modal.php") 
+-->
+
 <!-- Login Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
@@ -31,7 +36,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" >Register!</h5>
+        <h5 class="modal-title">Register!</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -63,7 +68,7 @@
             </div>
 
             <div class="col-12">
-            <label for="Gender" class="form-label">Gender</label><br>
+              <label for="Gender" class="form-label">Gender</label><br>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="regGender" id="regGender1" value="Male">
                 <label class="form-check-label" for="regGender1">Male</label>

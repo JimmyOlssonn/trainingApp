@@ -1,3 +1,4 @@
+/* JavaScript for profile.php */
 var startLayer = L.layerGroup(); // layer for start-marker
 var stopLayer = L.layerGroup(); // layer for stop-marker
 var runsLayer = L.layerGroup(); // layer for users existing runs

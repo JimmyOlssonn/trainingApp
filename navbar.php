@@ -1,3 +1,7 @@
+<!-- 
+  Navbar 
+  Include with: include_once("navbar.php") 
+ -->
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.php">TrainingApp</a>
