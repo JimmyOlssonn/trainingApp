@@ -1,8 +1,8 @@
-<!--
-    Controller for all PHP functions (except logout)
-    All forms go here and PDO is used to connect to a localhost database
- -->
 <?php
+/*
+Controller for all PHP functions (except logout)
+All forms go here and PDO is used to connect to a localhost database
+*/
 session_start();
 $db = "mysql:host=localhost;dbname=app_jimmy;charset=UTF8";
 try {
