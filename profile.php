@@ -90,24 +90,31 @@ session_start();
                             </div>
                         </div>
                         <div class="col-xl-6 col-sm-12 ">
-                            <div class="row">
-                                <div class="col-6 mb-3">
-                                    <label for="startX" class="form-label">Start X-koordinater</label>
-                                    <input type="text" class="form-control" id="startX" name="startX">
+                            <!-- Button will be visible on smaller devices and toggle the coordinates -->
+                            <a class="btn btn-light d-lg-none mb-3" data-bs-toggle="collapse" href="#collapseKoordinater" role="button" aria-expanded="false" aria-controls="collapseKoordinater">
+                                <span class="navbar-light">Show Coordinates</span>
+                            </a>
+                            <!-- Will be visible on bigger devices and can be toggles on smaller devices -->
+                            <div class="collapse d-lg-block" id="collapseKoordinater">
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <label for="startX" class="form-label">Start X-koordinater</label>
+                                        <input type="text" class="form-control" id="startX" name="startX">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="startY" class="form-label">Start Y-koordinater</label>
+                                        <input type="text" class="form-control" id="startY" name="startY">
+                                    </div>
                                 </div>
-                                <div class="col-6 mb-3">
-                                    <label for="startY" class="form-label">Start Y-koordinater</label>
-                                    <input type="text" class="form-control" id="startY" name="startY">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 mb-3">
-                                    <label for="stopX" class="form-label">Slut X-koordinater</label>
-                                    <input type="text" class="form-control" id="stopX" name="stopX">
-                                </div>
-                                <div class="col-6 mb-3">
-                                    <label for="stopY" class="form-label">Slut Y-koordinater</label>
-                                    <input type="text" class="form-control" id="stopY" name="stopY">
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <label for="stopX" class="form-label">Slut X-koordinater</label>
+                                        <input type="text" class="form-control" id="stopX" name="stopX">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="stopY" class="form-label">Slut Y-koordinater</label>
+                                        <input type="text" class="form-control" id="stopY" name="stopY">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -169,11 +176,11 @@ session_start();
                 <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register" class="col-5">
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="newX" name="changeEmail">
+                        <input type="text" class="form-control"  name="changeEmail">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="text" class="form-control" id="newX" name="changePassword">
+                        <input type="text" class="form-control" name="changePassword">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
