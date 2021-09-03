@@ -53,6 +53,8 @@ session_start();
             <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
                 <h1>Add new run</h1>
                 <div id="map"></div>
+                <button id="startPoint" type="button" class="btn btn-primary active" onclick="changeMarkerType('start')">Start-point</button>
+                <button id="endPoint" type="button" class="btn btn-outline-primary" onclick="changeMarkerType('stop')">End-point</button>
             </div>
             <div class="col"></div>
         </div>
