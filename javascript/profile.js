@@ -90,6 +90,7 @@ $(document).ready(function () {
       success: function (response) {
         var table = document.getElementById("runsList");
         var text = "";
+        lineLayer.clearLayers();
         runsLayer.clearLayers();
         startLayer.clearLayers();
         stopLayer.clearLayers();
