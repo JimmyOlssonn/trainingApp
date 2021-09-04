@@ -79,40 +79,40 @@ function changeMarkerType(type){ // Change the varible markerType and change the
   document.getElementById(id2).className = "btn btn-outline-primary";
 }
 
-$(document).ready(function () {
-  $(click).click(function () {
+function showAllRuns(){
+  $.ajax({
+    type: "GET",
+    url: "controller.php",
+    data: "getRuns",
+    dataType: "json",
+    success: function (response) {
+      var table = document.getElementById("runsList");
+      var text = "";
+      lineLayer.clearLayers();
+      runsLayer.clearLayers();
+      startLayer.clearLayers();
+      stopLayer.clearLayers();
+      for (let i = 0; i < response.length; i++) {
+        // Stop-marker
+        var mp2 = new L.Marker([response[i]["stopLatitude"], response[i]["stopLongitude"]]).addTo(runsLayer);
+        mp2.bindPopup("Slutpunkt").openPopup();
+        // Start-marker
+        var mp = new L.Marker([response[i]["startLatitude"], response[i]["startLongitude"]]).addTo(runsLayer);
+        mp.bindPopup("<b>" + response[i]["type"] + " i " + response[i]["length"] + "km</b><br>" + response[i]["date"]).openPopup();
+        // Line between
+        var polygon = L.polyline([
+          [response[i]["startLatitude"], response[i]["startLongitude"]],
+          [response[i]["stopLatitude"], response[i]["stopLongitude"]]
+        ]).addTo(runsLayer);
 
-    $.ajax({
-      type: "GET",
-      url: "controller.php",
-      data: "getRuns",
-      dataType: "json",
-      success: function (response) {
-        var table = document.getElementById("runsList");
-        var text = "";
-        lineLayer.clearLayers();
-        runsLayer.clearLayers();
-        startLayer.clearLayers();
-        stopLayer.clearLayers();
-        for (let i = 0; i < response.length; i++) {
-          // Stop-marker
-          var mp2 = new L.Marker([response[i]["stopLatitude"], response[i]["stopLongitude"]]).addTo(runsLayer);
-          mp2.bindPopup("Slutpunkt").openPopup();
-          // Start-marker
-          var mp = new L.Marker([response[i]["startLatitude"], response[i]["startLongitude"]]).addTo(runsLayer);
-          mp.bindPopup("<b>" + response[i]["type"] + " i " + response[i]["length"] + "km</b><br>" + response[i]["date"]).openPopup();
-          // Line between
-          var polygon = L.polyline([
-            [response[i]["startLatitude"], response[i]["startLongitude"]],
-            [response[i]["stopLatitude"], response[i]["stopLongitude"]]
-          ]).addTo(runsLayer);
-
-          // Add text to the table foreach run
-          text += "<tr><th scope='row'>" + (i + 1) + "</th><td>" + response[i]["type"] + "</td><td>" + response[i]["length"] + " km </td><td>" + response[i]["date"] + "</td></tr>";
-        }
-        table.innerHTML = text;
+        // Add text to the table foreach run
+        text += "<tr><th scope='row'>" + (i + 1) + "</th><td>" + response[i]["type"] + "</td><td>" + response[i]["length"] + " km </td><td>" + response[i]["date"] + "</td></tr>";
       }
-
-    });
+      table.innerHTML = text;
+    }
   });
+}
+
+$(document).ready(function () {
+  
 });

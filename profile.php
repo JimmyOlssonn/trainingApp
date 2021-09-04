@@ -147,7 +147,7 @@ session_start();
 
                     </tbody>
                 </table>
-                <button type="submit" id="click" class="btn btn-primary">Mina runs!</button>
+                <button type="submit" class="btn btn-primary" onclick="showAllRuns()">Mina runs!</button>
             </div>
             <div class="col"></div>
         </div>
