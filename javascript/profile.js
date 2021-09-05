@@ -6,6 +6,9 @@ var runsLayer = L.layerGroup(); // layer for users existing runs
 
 var markerType = "start";
 var startLat, startLng, stopLat, stopLng;
+var map;
+var markers = []; // store the start and end-points markers
+var marker;
 
 function startUp() { // body onload function
   mapStart();
@@ -19,38 +22,21 @@ function mapStart() {
   map.addLayer(lineLayer);
   map.addLayer(runsLayer);
 
-  map.on("click", function (e) {
+  map.on("click", function (e) { // when the map is clicked on
+    placeMarker(e); // function for placing down marker
+    marker.on('dragend', function (e) { // trigger after a marker have been dragged
+      markers[e.target.options.id].lat = e.target.getLatLng().lat;
+      markers[e.target.options.id].lng = e.target.getLatLng().lng;
 
-    // Really easy solution to creating Start-marker and Stop-marker
-    if (markerType === "start") {
-      startLayer.clearLayers();
-      runsLayer.clearLayers();
-      startLat = e.latlng.lat;
-      startLng = e.latlng.lng;
-      var mp = new L.Marker([startLat, startLng]).addTo(startLayer);
-      mp.bindPopup("<b>Start point</b>").openPopup();
-      document.getElementById("startX").value = startLat;
-      document.getElementById("startY").value = startLng;
-      changeMarkerType("stop");
-    }
-    else if (markerType === "stop"){
-      stopLayer.clearLayers();
-      runsLayer.clearLayers();
-      stopLat = e.latlng.lat;
-      stopLng = e.latlng.lng;
-      var mp = new L.Marker([stopLat, stopLng]).addTo(stopLayer);
-      mp.bindPopup("<b>End point</b>").openPopup();
-      document.getElementById("stopX").value = stopLat;
-      document.getElementById("stopY").value = stopLng;
-      changeMarkerType("start");
-    }
-    if(startLat !== undefined && stopLat !== undefined){
-      lineLayer.clearLayers();
-      var polygon = L.polyline([ // Writes a line between the start and stop-marker
-        [startLat, startLng],
-        [stopLat, stopLng]
-      ]).addTo(lineLayer);
-    }
+      document.getElementById(e.target.options.type + "X").value = e.target.getLatLng().lat;
+      document.getElementById(e.target.options.type + "Y").value = e.target.getLatLng().lng;
+
+      if (markers.length === 2) { // if there is two markers draw a line between them
+        drawLine();
+      }
+      changeMarkerType(e.target.options.type); // Change the markerType to the same type as the marker being dragged
+    });
+
   });
 
   $.ajax({
@@ -67,19 +53,63 @@ function mapStart() {
   });
 }
 
-function changeMarkerType(type){ // Change the varible markerType and change the Color on the buttons
-  markerType = type;
-  var id1 = "startPoint";
-  var id2 = "endPoint";
-  if(type === "stop"){
+function placeMarker(e) {
+  if (markerType === "start") { // place down start-point
+    var id = 0;
+    startLayer.clearLayers();
+    runsLayer.clearLayers();
+    var layer = startLayer;
+    var newMarkerType = "stop";
+  }
+  else if (markerType === "stop") { // place down end-point
+    var id = 1;
+    stopLayer.clearLayers();
+    runsLayer.clearLayers();
+    var layer = stopLayer;
+    var newMarkerType = "start";
+  }
+  var lat = e.latlng.lat;
+  var lng = e.latlng.lng;
+  marker = new L.Marker([lat, lng], {
+    draggable: true,
+    id: id,
+    type: markerType
+  }).addTo(layer);
+  marker.bindPopup("<b>" + markerType + " point</b>").openPopup();
+  markers[id] = { lat, lng, markerType };
+
+  document.getElementById(markerType + "X").value = lat;
+  document.getElementById(markerType + "Y").value = lng;
+
+  changeMarkerType(newMarkerType);
+  if (markers.length === 2) {
+    drawLine();
+  }
+}
+
+function drawLine() {
+  lineLayer.clearLayers();
+  var polygon = L.polyline([ // Writes a line between the start and stop-marker
+    [markers[0].lat, markers[0].lng],
+    [markers[1].lat, markers[1].lng]
+  ]).addTo(lineLayer);
+}
+
+function changeMarkerType(newType) { // Change the varible markerType and change the Color on the buttons
+  markerType = newType;
+  id1 = "startPoint";
+  id2 = "endPoint";
+  text = "You are now placing a " + newType + " marker";
+  if (newType === "stop") {
     id1 = "endPoint";
     id2 = "startPoint";
   }
   document.getElementById(id1).className = "btn btn-primary active";
   document.getElementById(id2).className = "btn btn-outline-primary";
+  document.getElementById("markerTypeText").innerHTML = text;
 }
 
-function showAllRuns(){
+function showAllRuns() {
   $.ajax({
     type: "GET",
     url: "controller.php",
@@ -92,6 +122,8 @@ function showAllRuns(){
       runsLayer.clearLayers();
       startLayer.clearLayers();
       stopLayer.clearLayers();
+      markers.length = 0;
+      changeMarkerType("start");
       for (let i = 0; i < response.length; i++) {
         // Stop-marker
         var mp2 = new L.Marker([response[i]["stopLatitude"], response[i]["stopLongitude"]]).addTo(runsLayer);
@@ -114,5 +146,5 @@ function showAllRuns(){
 }
 
 $(document).ready(function () {
-  
+
 });
