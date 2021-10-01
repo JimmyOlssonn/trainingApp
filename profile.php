@@ -30,6 +30,10 @@ session_start();
             height: 400px;
             min-width: 100px;
         }
+        #map2 {
+            height: 400px;
+            min-width: 100px;
+        }
     </style>
 </head>
 
@@ -48,6 +52,79 @@ session_start();
     include_once("navbar.php"); // includes the navbar
     ?>
     <div class="container-fluid mt-5">
+        <div class="row py-3">
+            <div class="col"></div>
+            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
+                <div class="row">
+                    <h1 class="display-5">Welcome <?php echo $_SESSION['Forname']; ?> </h1>
+                    <div class="col-8">
+
+                    </div>
+                    <div class="col-4">
+                        <?php
+                        echo '
+                            <table class="table lead fs-6">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Meny</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Add run</td>
+                                </tr>
+                                <tr>
+                                    <td>My runs</td>    
+                                </tr>
+                                <tr>
+                                    <td>Membership</td>
+                                </tr>
+                                <tr>
+                                    <td>Settings</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table lead fs-6">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Användaruppgifter</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Förnamn</td>
+                                    <td>' . $_SESSION['Forname'] . '</td>
+                                </tr>
+                                <tr>
+                                    <td>Efternamn</td>    
+                                    <td>' . $_SESSION['Lastname'] . '</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>' . $_SESSION['Email'] . '</td>
+                                </tr>
+                                <tr>
+                                    <td>Stad</td>
+                                    <td>' . $_SESSION['City'] . '</td>
+                                </tr>
+                                <tr>
+                                    <td>Land</td>
+                                    <td>' . $_SESSION['Country'] . '</td>
+                                </tr>
+                                <tr>
+                                    <td>Medlemskap</td>
+                                    <td>' . $_SESSION['Membership'] . '</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            ';
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
         <div class="row py-3">
             <div class="col"></div>
             <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
@@ -134,6 +211,13 @@ session_start();
         <div class="row py-3">
             <div class="col"></div>
             <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
+                <div id="map2"></div>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row py-3">
+            <div class="col"></div>
+            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
                 <h1>Your runs</h1>
                 <table class="table">
                     <thead>
@@ -179,7 +263,7 @@ session_start();
                 <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register" class="col-5">
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Email</label>
-                        <input type="text" class="form-control"  name="changeEmail">
+                        <input type="text" class="form-control" name="changeEmail">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
