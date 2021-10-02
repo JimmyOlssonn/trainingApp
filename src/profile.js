@@ -13,7 +13,7 @@ var marker;
 
 function startUp() { // body onload function
     mapStart();
-
+    showRunsDiagram();
     $.ajax({
         type: "GET",
         url: "controller.php",
@@ -138,6 +138,44 @@ function showAllRuns() {
                 text += "<tr><th scope='row'>" + (i + 1) + "</th><td>" + response[i]["type"] + "</td><td>" + response[i]["length"] + " km </td><td>" + response[i]["date"] + "</td></tr>";
             }
             table.innerHTML = text;
+        }
+    });
+}
+
+function showRunsDiagram() {
+    $.ajax({
+        type: "GET",
+        url: "controller.php",
+        data: "getRunsDiagram",
+        dataType: "json",
+        success: function (response) {
+            var lengths = [];
+            var dates = [];
+            for (var i = 0; i < response.length; i++) {
+                lengths.push(parseInt(response[i]["length"], 10));
+                dates.push(response[i]["date"] + " " + response[i]["type"]);
+            }
+            var ctx = document.getElementById('profileDiagram');
+            var profileDiagram = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Your latest runs',
+                        data: lengths,
+                        fill: false,
+                        borderColor: '#39A2DB',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
         }
     });
 }

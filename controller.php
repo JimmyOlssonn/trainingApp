@@ -101,10 +101,10 @@ if (isset($_POST["newDate"])) { // Add new Run
         ]);
     }
     print_r($statement->errorInfo());
-    // header("Location:profile.php");
+    header("Location:profile.php");
     exit();
 }
-if (isset($_GET["getRuns"])) { // Get existing runs from a user
+if (isset($_GET["getRuns"])) { // Get existing latitude, type, date and length from a users runs to add to map and table
     $name = $_SESSION["Username"];
     $sql = 'SELECT * FROM runs Where User = :username';
     $a = array();
@@ -116,6 +116,25 @@ if (isset($_GET["getRuns"])) { // Get existing runs from a user
         ]);
         while ($user = $statement->fetch(PDO::FETCH_ASSOC)) {
             $a[] = array("startLatitude" => $user["Start_Latitude"], "startLongitude" => $user["Start_Longitude"], "stopLatitude" => $user["Stop_Latitude"], "stopLongitude" => $user["Stop_Longitude"], "type" => $user["Type"], "date" => $user["Date"], "length" => $user["Length"]);
+        }
+        print json_encode($a);
+    } catch (\PDOException $e) {
+        die($e->getMessage());
+    }
+}
+
+if (isset($_GET["getRunsDiagram"])) { // Get existing date, type and length from a users runs to add to diagram
+    $name = $_SESSION["Username"];
+    $sql = 'SELECT * FROM runs Where User = :username';
+    $a = array();
+    $i = 0;
+    try {
+        $statement = $pdo->prepare($sql);
+        $statement->execute([
+            ':username' => $name
+        ]);
+        while ($user = $statement->fetch(PDO::FETCH_ASSOC)) {
+            $a[] = array("date" => $user["Date"], "type" => $user["Type"], "length" => $user["Length"]);
         }
         print json_encode($a);
     } catch (\PDOException $e) {

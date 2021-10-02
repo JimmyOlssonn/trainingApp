@@ -20,6 +20,8 @@ session_start();
     <!-- Jquery JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- JavaScript -->
     <script src="src/profile.js"></script>
 
@@ -50,18 +52,22 @@ session_start();
         <div class="row">
             <div class="col"></div>
             <div id="content" class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
-                <div class="row py-3">
-                    <div class="row bg-light">
+                <div class="row py-3 bg-light">
+                    <div class="row">
                         <div class="col-auto">
                             <div id="exampleImg"></div>
                         </div>
                         <div class="col-6">
                             <h1 class="display-6 px-2"><?php echo $_SESSION['Forname'] . " " . $_SESSION['Lastname'] ?></h1>
                             <h2 class="lead px-3"><?php echo $_SESSION['Username'] ?></h2>
+
                         </div>
                         <div class="col-3">
-                            
+
                         </div>
+                    </div>
+                    <div class="row">
+                        <canvas id="profileDiagram"></canvas>
                     </div>
                 </div>
                 <div class="row py-3">
