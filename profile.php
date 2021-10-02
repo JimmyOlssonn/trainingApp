@@ -50,71 +50,18 @@ session_start();
         <div class="row">
             <div class="col"></div>
             <div id="content" class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
-                <div class="row py-3" style="height:95vh">
-                    <h1 class="display-5">Welcome <?php echo $_SESSION['Forname']; ?> </h1>
-                    <div class="col-8">
-
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <?php
-                        echo '
-                            <table class="table lead fs-6">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">Meny</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Add run</td>
-                                </tr>
-                                <tr>
-                                    <td>My runs</td>    
-                                </tr>
-                                <tr>
-                                    <td>Membership</td>
-                                </tr>
-                                <tr>
-                                    <td>Settings</td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-                            <table class="table lead fs-6">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">Användaruppgifter</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Förnamn</td>
-                                    <td>' . $_SESSION['Forname'] . '</td>
-                                </tr>
-                                <tr>
-                                    <td>Efternamn</td>    
-                                    <td>' . $_SESSION['Lastname'] . '</td>
-                                </tr>
-                                <tr>
-                                    <td>Email</td>
-                                    <td>' . $_SESSION['Email'] . '</td>
-                                </tr>
-                                <tr>
-                                    <td>Stad</td>
-                                    <td>' . $_SESSION['City'] . '</td>
-                                </tr>
-                                <tr>
-                                    <td>Land</td>
-                                    <td>' . $_SESSION['Country'] . '</td>
-                                </tr>
-                                <tr>
-                                    <td>Medlemskap</td>
-                                    <td>' . $_SESSION['Membership'] . '</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            ';
-                        ?>
+                <div class="row py-3">
+                    <div class="row bg-light">
+                        <div class="col-auto">
+                            <div id="exampleImg"></div>
+                        </div>
+                        <div class="col-6">
+                            <h1 class="display-6 px-2"><?php echo $_SESSION['Forname'] . " " . $_SESSION['Lastname'] ?></h1>
+                            <h2 class="lead px-3"><?php echo $_SESSION['Username'] ?></h2>
+                        </div>
+                        <div class="col-3">
+                            
+                        </div>
                     </div>
                 </div>
                 <div class="row py-3">

@@ -10,6 +10,13 @@
     min-width: 10px;
 }
 
+#exampleImg{
+    height: 200px;
+    width: 200px;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+}
+
 @media screen and (max-width: 767px) {
     #map{
         height: 300px !important;
