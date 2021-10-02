@@ -1,0 +1,16 @@
+
+#map {
+    height: 600px;
+    min-width: 10px;
+}
+
+#map2 {
+    height: 400px;
+    min-width: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #map{
+        height: 300px !important;
+    }
+  }

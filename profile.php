@@ -21,19 +21,14 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- JavaScript -->
-    <script src="javascript/profile.js"></script>
+    <script src="src/profile.js"></script>
+
+    <link rel="stylesheet" href="src/main.css">
 
     <title>trainingApp</title>
 
     <style>
-        #map {
-            height: 400px;
-            min-width: 100px;
-        }
-        #map2 {
-            height: 400px;
-            min-width: 100px;
-        }
+        
     </style>
 </head>
 
@@ -52,15 +47,15 @@ session_start();
     include_once("navbar.php"); // includes the navbar
     ?>
     <div class="container-fluid mt-5">
-        <div class="row py-3">
+        <div class="row py-3 align-items-center">
             <div class="col"></div>
-            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
+            <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12">
                 <div class="row">
                     <h1 class="display-5">Welcome <?php echo $_SESSION['Forname']; ?> </h1>
                     <div class="col-8">
 
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4 col-sm-12">
                         <?php
                         echo '
                             <table class="table lead fs-6">
@@ -125,9 +120,9 @@ session_start();
             </div>
             <div class="col"></div>
         </div>
-        <div class="row py-3">
+        <!-- <div class="row py-3">
             <div class="col"></div>
-            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
+            <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12">
                 <h1>Add new run</h1>
                 <div id="map"></div>
                 <button id="startPoint" type="button" class="btn btn-primary active" onclick="changeMarkerType('start')">Start-point</button>
@@ -135,89 +130,100 @@ session_start();
                 <label id="markerTypeText">You are now placing a start marker</label>
             </div>
             <div class="col"></div>
-        </div>
+        </div> -->
         <div class="row py-3">
             <div class="col"></div>
-            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
-                <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="addRun">
-                    <div class="row">
-                        <div class="col-xl-6 col-sm-12">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Typ av träning</label>
-                                <select class="form-select" name="newType" required>
-                                    <option value="Promenad">Promenad</option>
-                                    <option value="Löpning">Löpning</option>
-                                    <option value="Cykling">Cykling</option>
-                                    <option value="Skidor">Skidor</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="newLength" class="form-label">Sträcka</label>
-                                <input type="text" class="form-control" id="newLength" name="newLength" placeholder="skrivet i kilometer">
-                            </div>
-                            <div class="mb-3">
-                                <label for="newDate" class="form-label">Datum</label>
-                                <input type="date" class="form-control" id="newDate" name="newDate">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="newCom" class="form-label">Kommentar</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="newCom"></textarea>
-                            </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Använd kartan</label>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-sm-12 ">
-                            <!-- Button will be visible on smaller devices and toggle the coordinates -->
-                            <a class="btn btn-light d-lg-none mb-3" data-bs-toggle="collapse" href="#collapseKoordinater" role="button" aria-expanded="false" aria-controls="collapseKoordinater">
-                                <span class="navbar-light">Show Coordinates</span>
-                            </a>
-                            <!-- Will be visible on bigger devices and can be toggles on smaller devices -->
-                            <div class="collapse d-lg-block" id="collapseKoordinater">
-                                <div class="row">
-                                    <div class="col-6 mb-3">
-                                        <label for="startX" class="form-label">Start X-koordinater</label>
-                                        <input type="text" class="form-control" id="startX" name="startX">
-                                    </div>
-                                    <div class="col-6 mb-3">
-                                        <label for="startY" class="form-label">Start Y-koordinater</label>
-                                        <input type="text" class="form-control" id="startY" name="startY">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6 mb-3">
-                                        <label for="stopX" class="form-label">Slut X-koordinater</label>
-                                        <input type="text" class="form-control" id="stopX" name="stopX">
-                                    </div>
-                                    <div class="col-6 mb-3">
-                                        <label for="stopY" class="form-label">Slut Y-koordinater</label>
-                                        <input type="text" class="form-control" id="stopY" name="stopY">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
+            <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
+                <div class="row">
+                    <h1>Add new run</h1>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div id="map"></div>
+                        <button id="startPoint" type="button" class="btn btn-primary active" onclick="changeMarkerType('start')">Start-point</button>
+                        <button id="endPoint" type="button" class="btn btn-outline-primary" onclick="changeMarkerType('stop')">End-point</button>
+                        <label id="markerTypeText">You are now placing a start marker</label>
                     </div>
-                </form>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="addRun">
+                            <div class="row">
+                                <div class="col-xl-12 col-sm-12">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Typ av träning</label>
+                                        <select class="form-select" name="newType" required>
+                                            <option value="Promenad">Promenad</option>
+                                            <option value="Löpning">Löpning</option>
+                                            <option value="Cykling">Cykling</option>
+                                            <option value="Skidor">Skidor</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="newLength" class="form-label">Sträcka</label>
+                                        <input type="text" class="form-control" id="newLength" name="newLength" placeholder="skrivet i kilometer">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="newDate" class="form-label">Datum</label>
+                                        <input type="date" class="form-control" id="newDate" name="newDate">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="newCom" class="form-label">Kommentar</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="newCom"></textarea>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Använd kartan</label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-sm-12 ">
+                                    <!-- Button will be visible on smaller devices and toggle the coordinates -->
+                                    <a class="btn btn-light d-lg-none mb-3" data-bs-toggle="collapse" href="#collapseKoordinater" role="button" aria-expanded="false" aria-controls="collapseKoordinater">
+                                        <span class="navbar-light">Show Coordinates</span>
+                                    </a>
+                                    <!-- Will be visible on bigger devices and can be toggles on smaller devices -->
+                                    <div class="collapse d-lg-block" id="collapseKoordinater">
+                                        <div class="row">
+                                            <div class="col-6 mb-3">
+                                                <label for="startX" class="form-label">Start X-koordinater</label>
+                                                <input type="text" class="form-control" id="startX" name="startX">
+                                            </div>
+                                            <div class="col-6 mb-3">
+                                                <label for="startY" class="form-label">Start Y-koordinater</label>
+                                                <input type="text" class="form-control" id="startY" name="startY">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 mb-3">
+                                                <label for="stopX" class="form-label">Slut X-koordinater</label>
+                                                <input type="text" class="form-control" id="stopX" name="stopX">
+                                            </div>
+                                            <div class="col-6 mb-3">
+                                                <label for="stopY" class="form-label">Slut Y-koordinater</label>
+                                                <input type="text" class="form-control" id="stopY" name="stopY">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div class="col"></div>
         </div>
         <div class="row py-3">
             <div class="col"></div>
-            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
+            <div class="col-xl-6 col-lg-10 col-md-12 col-sm-12">
                 <div id="map2"></div>
             </div>
             <div class="col"></div>
         </div>
         <div class="row py-3">
             <div class="col"></div>
-            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
+            <div class="col-xl-6 col-lg-10 col-md-12 col-sm-12">
                 <h1>Your runs</h1>
                 <table class="table">
                     <thead>
