@@ -28,7 +28,7 @@ session_start();
     <title>trainingApp</title>
 
     <style>
-        
+
     </style>
 </head>
 
@@ -47,10 +47,10 @@ session_start();
     include_once("navbar.php"); // includes the navbar
     ?>
     <div class="container-fluid mt-5">
-        <div class="row py-3 align-items-center">
+        <div class="row">
             <div class="col"></div>
-            <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12">
-                <div class="row">
+            <div id="content" class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
+                <div class="row py-3" style="height:95vh">
                     <h1 class="display-5">Welcome <?php echo $_SESSION['Forname']; ?> </h1>
                     <div class="col-8">
 
@@ -117,21 +117,15 @@ session_start();
                         ?>
                     </div>
                 </div>
-            </div>
-            <div class="col"></div>
-        </div>
-        <div class="row py-3">
-            <div class="col"></div>
-            <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
-                <div class="row">
+                <div class="row py-3">
                     <h1>Add new run</h1>
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                         <div id="map"></div>
                         <button id="startPoint" type="button" class="btn btn-primary active" onclick="changeMarkerType('start')">Start-point</button>
                         <button id="endPoint" type="button" class="btn btn-outline-primary" onclick="changeMarkerType('stop')">End-point</button>
                         <label id="markerTypeText">You are now placing a start marker</label>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                         <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="addRun">
                             <div class="row">
                                 <div class="col-xl-12 col-sm-12">
@@ -200,76 +194,59 @@ session_start();
                         </form>
                     </div>
                 </div>
-            </div>
-            <div class="col"></div>
-        </div>
-        <div class="row py-3">
-            <div class="col"></div>
-            <div class="col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                <div id="map2"></div>
-            </div>
-            <div class="col"></div>
-        </div>
-        <div class="row py-3">
-            <div class="col"></div>
-            <div class="col-xl-6 col-lg-10 col-md-12 col-sm-12">
-                <h1>Your runs</h1>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Träning</th>
-                            <th scope="col">Distans</th>
-                            <th scope="col">Datum</th>
-                        </tr>
-                    </thead>
-                    <tbody id="runsList">
-
-                    </tbody>
-                </table>
-                <button type="submit" class="btn btn-primary" onclick="showAllRuns()">Mina runs!</button>
-            </div>
-            <div class="col"></div>
-        </div>
-
-        <div class="row py-3">
-            <div class="col"></div>
-            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
-                <h1>Change Membership</h1>
-                <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register" class="col-5">
-                    <div class="mb-3">
-                        <label for="membership" class="form-label">Membership</label>
-                        <select id="changeMembership" class="form-select" name="changeMembership" required>
-                            <option value="Free">Free</option>
-                            <option value="Pro">Pro</option>
-                            <option value="Elite">Elite</option>
-                        </select>
+                <div class="row py-3">
+                    <h1>Your runs</h1>
+                    <div class="col-xl-8 col-lg-6 col-md-12 col-sm-12">
+                        <div id="map2"></div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Träning</th>
+                                    <th scope="col">Distans</th>
+                                    <th scope="col">Datum</th>
+                                </tr>
+                            </thead>
+                            <tbody id="runsList">
+
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-primary" onclick="showAllRuns()">Mina runs!</button>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <h1>Change Membership</h1>
+                    <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register" class="col-5">
+                        <div class="mb-3">
+                            <label for="membership" class="form-label">Membership</label>
+                            <select id="changeMembership" class="form-select" name="changeMembership" required>
+                                <option value="Free">Free</option>
+                                <option value="Pro">Pro</option>
+                                <option value="Elite">Elite</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="row py-3">
+                    <h1>Change Username and/or Password</h1>
+                    <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register" class="col-5">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Email</label>
+                            <input type="text" class="form-control" name="changeEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="text" class="form-control" name="changePassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div> <!-- End of big div -->
             <div class="col"></div>
         </div>
-
-        <div class="row py-3">
-            <div class="col"></div>
-            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12">
-                <h1>Change Username and/or Password</h1>
-                <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register" class="col-5">
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Email</label>
-                        <input type="text" class="form-control" name="changeEmail">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="text" class="form-control" name="changePassword">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-            <div class="col"></div>
-        </div>
-
     </div>
     <?php
     include_once("modal.php"); // include the modals for register and login
