@@ -120,17 +120,6 @@ session_start();
             </div>
             <div class="col"></div>
         </div>
-        <!-- <div class="row py-3">
-            <div class="col"></div>
-            <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12">
-                <h1>Add new run</h1>
-                <div id="map"></div>
-                <button id="startPoint" type="button" class="btn btn-primary active" onclick="changeMarkerType('start')">Start-point</button>
-                <button id="endPoint" type="button" class="btn btn-outline-primary" onclick="changeMarkerType('stop')">End-point</button>
-                <label id="markerTypeText">You are now placing a start marker</label>
-            </div>
-            <div class="col"></div>
-        </div> -->
         <div class="row py-3">
             <div class="col"></div>
             <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
