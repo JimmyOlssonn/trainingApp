@@ -75,52 +75,33 @@ if (isset($_POST["logName"])) { // User login
 }
 if (isset($_POST["newDate"])) { // Add new Run
     $name = $_SESSION["Username"];
-    $sql = 'SELECT COUNT(User) FROM runs Where User = :username';
-    try {
-        $statement = $pdo->prepare($sql);
+    $user = $_SESSION["Username"];
+    $date = $_POST["newDate"];
+    $type = $_POST["newType"];
+    $length = $_POST["newLength"];
+    $comment = $_POST["newCom"];
+    $startLatitude = $_POST["startX"];
+    $startLongitude = $_POST["startY"];
+    $stopLatitude = $_POST["stopX"];
+    $stopLongitude = $_POST["stopY"];
+    $sql = 'INSERT INTO runs(User, Date, Type, Length, Comment, Start_Latitude, Start_Longitude, Stop_Latitude, Stop_Longitude) VALUES(:user , :date, :type, :length, :comment, :startLatitude, :startLongitude, :stopLatitude, :stopLongitude)';
+
+    $statement = $pdo->prepare($sql);
+    if ($statement) {
         $statement->execute([
-            ':username' => $name
+            ':user' => $user,
+            ':date' => $date,
+            ':type' => $type,
+            ':length' => $length,
+            ':comment' => $comment,
+            ':startLatitude' => $startLatitude,
+            ':startLongitude' => $startLongitude,
+            ':stopLatitude' => $stopLatitude,
+            ':stopLongitude' => $stopLongitude
         ]);
-        $data = $statement->fetch();
-
-        if ($data) {
-            if (($_SESSION["Membership"] == "Free" && $data[0] < 2) || ($_SESSION["Membership"] == "Pro" && $data[0] < 4) || ($_SESSION["Membership"] == "Elite" && $data[0] < 10)) {
-                $user = $_SESSION["Username"];
-                $date = $_POST["newDate"];
-                $type = $_POST["newType"];
-                $length = $_POST["newLength"];
-                $comment = $_POST["newCom"];
-                $startLatitude = $_POST["startX"];
-                $startLongitude = $_POST["startY"];
-                $stopLatitude = $_POST["stopX"];
-                $stopLongitude = $_POST["stopY"];
-                $sql = 'INSERT INTO runs(User, Date, Type, Length, Comment, Start_Latitude, Start_Longitude, Stop_Latitude, Stop_Longitude) VALUES(:user , :date, :type, :length, :comment, :startLatitude, :startLongitude, :stopLatitude, :stopLongitude)';
-
-                $statement = $pdo->prepare($sql);
-
-                $statement->execute([
-                    ':user' => $user,
-                    ':date' => $date,
-                    ':type' => $type,
-                    ':length' => $length,
-                    ':comment' => $comment,
-                    ':startLatitude' => $startLatitude,
-                    ':startLongitude' => $startLongitude,
-                    ':stopLatitude' => $stopLatitude,
-                    ':stopLongitude' => $stopLongitude
-                ]);
-                header("Location:profile.php");
-                exit();
-            } else {
-                echo "Din medlemskap är " . $_SESSION["Membership"] . " och du får bara skapa " . $data[0] . "st runs.";
-            }
-        } else {
-            echo "Error loading runs";
-        }
-    } catch (\PDOException $e) {
-        die($e->getMessage());
     }
-    //header("Location:profile.php");
+    print_r($statement->errorInfo());
+    // header("Location:profile.php");
     exit();
 }
 if (isset($_GET["getRuns"])) { // Get existing runs from a user
@@ -136,8 +117,7 @@ if (isset($_GET["getRuns"])) { // Get existing runs from a user
         while ($user = $statement->fetch(PDO::FETCH_ASSOC)) {
             $a[] = array("startLatitude" => $user["Start_Latitude"], "startLongitude" => $user["Start_Longitude"], "stopLatitude" => $user["Stop_Latitude"], "stopLongitude" => $user["Stop_Longitude"], "type" => $user["Type"], "date" => $user["Date"], "length" => $user["Length"]);
         }
-        print json_encode($a); 
-
+        print json_encode($a);
     } catch (\PDOException $e) {
         die($e->getMessage());
     }
