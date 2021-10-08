@@ -45,13 +45,9 @@ try {
 
 <body onload="startUp()">
     <section id="home" class="full-container">
-        <div class="navbar">
-            <a href="#home">Hem</a>
-            <a href="#about">Om oss</a>
-            <a href="#price">Priser</a>
-            <a onclick="toggleRegModal()">Registrera</a>
-            <a onclick="toggleLoginModal()">Logga in</a>
-        </div>
+        <?php
+        include_once("navbar.php"); // includes the navbar
+        ?>
         <div>
             <h1 class="title1">trainingApp</h1>
             <h1 class="title4">Börja din träna idag</h1>
