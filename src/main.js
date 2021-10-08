@@ -17,7 +17,6 @@ var map;
 function startUp() { // body onload function
     mapStart();
     showRunsDiagram();
-    showRunsMap()
 }
 
 function mapStart() {
@@ -67,6 +66,12 @@ function showRunsDiagram() { // Create Chart
     });
 }
 
-function showRunsMap(){
-    
+function toggleLoginModal(){
+    $("#register-modal").hide();
+    $("#login-modal").toggle();
+}
+
+function toggleRegModal(){
+    $("#login-modal").toggle();
+    $("#register-modal").toggle();
 }
