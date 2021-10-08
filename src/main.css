@@ -56,7 +56,7 @@ body {
     margin-bottom: 100px;
 }
 
-#diagram{
+#diagram {
     flex-wrap: wrap-reverse;
 }
 
@@ -100,10 +100,16 @@ body {
     font-size: 50px;
 }
 
+.title4{
+    text-align: center;
+    font-family: 'Gemunu Libre';
+    font-size: 20px;
+}
+
 #home {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url("../img/athlete-g9d2b14e2b_1920.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -147,7 +153,6 @@ body {
     justify-content: center;
     font-family: 'Gemunu Libre';
     overflow: hidden;
-    position: sticky;
 }
 
 .navbar a {
@@ -179,10 +184,9 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-    .auto-container, .half-container{
+    .auto-container, .half-container {
         padding: 100px 20px;
     }
-    
     .navbar a {
         margin: 0px;
     }
@@ -192,7 +196,7 @@ body {
     #map {
         height: 300px !important;
     }
-    .column-lg, .column-sm  {
+    .column-lg, .column-sm {
         width: 100%;
     }
 }

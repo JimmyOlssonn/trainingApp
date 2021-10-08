@@ -38,7 +38,11 @@
             <a href="#price">Registrera</a>
             <a id="test" href="#price">Logga in</a>
         </div>
-        <h1 class="title1">trainingApp</h1>
+        <div>
+            <h1 class="title1">trainingApp</h1>
+            <h1 class="title4">Börja din träna idag</h1>
+        </div>
+        <h1 class="title4">trainingApp</h1>
 
     </section>
 
@@ -54,7 +58,7 @@
     <section id="maps" class="auto-container">
         <div class="flex-container">
             <div class="column-lg">
-                <h1 class="title3">Logga dina träningar i en karta!</h1>
+                <h2 class="title3">Logga dina träningar i en karta!</h1>
             </div>
             <div class="column-sm">
                 <div id="display-map" class="map1"></div>
@@ -66,7 +70,7 @@
                 <canvas id="display-diagram" style="position: relative; height:40vh;"></canvas>
             </div>
             <div class="column-lg">
-                <h1 class="title3">Se dina resultat i ett diagram!</h1>
+                <h2 class="title3">Se dina resultat i ett diagram!</h1>
             </div>
         </div>
     </section>
