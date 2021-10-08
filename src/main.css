@@ -52,7 +52,12 @@ body {
     height: 100%;
     background-color: rgb(198, 217, 236, 0.6);
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+#diagram{
+    flex-wrap: wrap-reverse;
 }
 
 .gap {
@@ -63,6 +68,8 @@ body {
 .column-lg {
     width: 60%;
     background-color: white;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .column-sm {

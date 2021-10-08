@@ -17,25 +17,29 @@
     <!-- Jquery JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="https://kit.fontawesome.com/ac232d5325.js" crossorigin="anonymous"></script>
 
     <title>trainingApp</title>
 
     <link rel="stylesheet" href="src/main.css">
 
+    <script src="src/main.js"></script>
+
 </head>
 
-<body>
+<body onload="startUp()">
     <section id="home" class="full-container">
         <div class="navbar">
             <a href="#home">Hem</a>
             <a href="#about">Om oss</a>
             <a href="#price">Priser</a>
             <a href="#price">Registrera</a>
-            <a id="test"href="#price">Logga in</a>
+            <a id="test" href="#price">Logga in</a>
         </div>
         <h1 class="title1">trainingApp</h1>
-        
+
     </section>
 
     <section id="about" class="auto-container">
@@ -53,21 +57,23 @@
                 <h1 class="title3">Logga dina träningar i en karta!</h1>
             </div>
             <div class="column-sm">
-                <div class="map1"></div>
+                <div id="display-map" class="map1"></div>
             </div>
         </div>
-    </section>
 
-    <section id="diagram" class="auto-container">
-        <div class="flex-container">
+        <div id="diagram" class="flex-container">
             <div class="column-sm">
-                <div class="map1"></div>
+                <canvas id="display-diagram" style="position: relative; height:40vh;"></canvas>
             </div>
             <div class="column-lg">
                 <h1 class="title3">Se dina resultat i ett diagram!</h1>
             </div>
         </div>
     </section>
+
+    <!-- <section id="diagram" class="auto-container">
+        
+    </section> -->
 
     <div class="gap"></div>
 
