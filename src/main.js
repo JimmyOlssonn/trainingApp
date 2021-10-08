@@ -7,14 +7,34 @@ var chartData = [       // Example data for chart
     ["2021-08-27",9],
 ];
 
+var mapData = [
+    ["2021-08-13",19,51.48749613695947,-0.11984002369270554, 51.487282354387425,-0.062465772452053876],
+]
+
+var displayLayer = L.layerGroup();
+var map;
+
 function startUp() { // body onload function
     mapStart();
     showRunsDiagram();
+    showRunsMap()
 }
 
 function mapStart() {
     // Create the map
-    var map = L.map('display-map').setView([51.505, -0.09], 12);
+    map = L.map('display-map').setView([51.505, -0.09], 12);
+    map.addLayer(displayLayer);
+
+    displayLayer.clearLayers();
+    for (let i = 0; i < mapData.length; i++) {
+        var mp = new L.Marker([mapData[i][2], mapData[i][3]]).addTo(displayLayer);
+        var mp2 = new L.Marker([mapData[i][4], mapData[i][5]]).addTo(displayLayer);
+        mp.bindPopup("<b>" + mapData[i][1] + "km</b><br>" + mapData[i][0]).openPopup();
+        var polygon = L.polyline([
+            [mapData[i][2], mapData[i][3]],
+            [mapData[i][4], mapData[i][5]]
+        ]).addTo(displayLayer);
+    }
 }
 
 function showRunsDiagram() { // Create Chart
@@ -45,4 +65,8 @@ function showRunsDiagram() { // Create Chart
             }
         }
     });
+}
+
+function showRunsMap(){
+    
 }
