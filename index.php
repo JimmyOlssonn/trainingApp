@@ -37,6 +37,7 @@ try {
     <title>trainingApp</title>
 
     <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="src/home.css">
 
     <script src="src/main.js"></script>
 

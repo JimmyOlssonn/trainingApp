@@ -1,0 +1,16 @@
+#map {
+    height: 600px;
+    min-width: 10px;
+}
+
+#map2 {
+    height: 400px;
+    min-width: 10px;
+}
+
+#exampleImg {
+    height: 200px;
+    width: 200px;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+}

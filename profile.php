@@ -26,6 +26,7 @@ session_start();
     <script src="src/profile.js"></script>
 
     <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="src/profile.css">
 
     <title>trainingApp</title>
 
