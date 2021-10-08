@@ -1,4 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Nunito:wght@200&display=swap');
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Nunito';
+    background-image: url("../img/athlete-g9d2b14e2b_1920.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
+.full-container {
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.half-container {
+    height: 70vh;
+    width: 100%;
+    padding: 100px 150px;
+    box-sizing: border-box;
+    display: block;
+    background-color: white;
+}
+
+.auto-container {
+    min-height: 70vh;
+    width: 100%;
+    padding: 100px 150px;
+    box-sizing: border-box;
+    display: block;
+    background-color: white;
+}
+
+.box-container {
+    width: 100%;
+    background-color: rgb(198, 217, 236, 0.6);
+    margin: auto;
+    line-height: 2;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 6% 10%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(198, 217, 236, 0.6);
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.gap {
+    height: 5vh;
+    width: 100%;
+}
+
+.column-lg {
+    width: 60%;
+    background-color: white;
+}
+
+.column-sm {
+    width: 40%;
+    background-color: white;
+}
+
+.map1 {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+
+.title1 {
+    text-align: center;
+    font-family: 'Gemunu Libre';
+    font-size: 60px;
+}
+
+.title2 {
+    text-align: center;
+    font-family: 'Gemunu Libre';
+    font-size: 50px;
+}
+
+.title3 {
+    font-family: 'Gemunu Libre';
+    font-size: 50px;
+}
+
+#home {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-image: url("../img/athlete-g9d2b14e2b_1920.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    box-sizing: border-box;
+    color: white !important;
+}
+
+.pricing table {
+    width: 100%;
+    background-color: white;
+}
+
+.pricing td, .pricing th {
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.pricing tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.pricing tr:hover {
+    background-color: rgb(51, 105, 30, 0.3);
+}
+
+.pricing th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    font-family: 'Gemunu Libre';
+    overflow: hidden;
+    position: sticky;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0px 40px;
+}
 
 #map {
     height: 600px;
@@ -10,7 +159,7 @@
     min-width: 10px;
 }
 
-#exampleImg{
+#exampleImg {
     height: 200px;
     width: 200px;
     background-color: #e2e2e2;
@@ -18,7 +167,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    #map{
+    #map {
         height: 300px !important;
     }
 }
