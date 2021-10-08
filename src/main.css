@@ -9,6 +9,10 @@ body {
     font-family: 'Nunito';
 }
 
+a{
+    color:white;
+}
+
 .full-container {
     height: 100vh;
     width: 100%;
@@ -92,8 +96,8 @@ body {
 
 .title4 {
     text-align: center;
-    font-family: 'Gemunu Libre';
     font-size: 20px;
+    text-decoration: none;
 }
 
 .navbar {
@@ -120,6 +124,12 @@ body {
 
 .nav-links li {
     display: inline-block;
+    padding: 0px 20px;
+}
+
+.bottom-navbar{
+    display: flex;
+    justify-content: space-between;
     padding: 0px 20px;
 }
 

@@ -50,9 +50,12 @@ try {
         ?>
         <div>
             <h1 class="title1">trainingApp</h1>
-            <h1 class="title4">Börja din träna idag</h1>
+            <h1 class="title4">Börja din träning med oss</h1>
         </div>
-        <h1 class="title4">trainingApp</h1>
+        <div class="bottom-navbar">
+            <p><a href="https://jimmy.skatens.se" class="title4">@Jimmy Olsson</a></p>
+            <p class="title4">Bild av <a href="https://pixabay.com/sv/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1840437">Pexels</a> från <a href="https://pixabay.com/sv/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1840437">Pixabay</a></h1>
+        </div>
 
     </section>
 
