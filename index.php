@@ -38,7 +38,7 @@
         
     </section>
 
-    <section id="about" class="half-container">
+    <section id="about" class="auto-container">
         <h1 class="title2">Om trainingApp</h1>
         <div class="box-container">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum diam, vel convallis ipsum. Maecenas varius ex odio, eget tempor risus vestibulum at. Vivamus interdum hendrerit nibh ut tempus. Maecenas eu egestas erat. Quisque efficitur varius velit sed volutpat. Phasellus ornare egestas aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc lacinia massa sed lorem sodales venenatis. Quisque est neque, sodales viverra diam at, molestie semper ligula. Praesent vestibulum commodo iaculis. Nullam pellentesque at urna a aliquet. Fusce id sem turpis. Donec vitae tellus eget sem placerat luctus. Etiam sed velit magna.</p>
@@ -47,7 +47,7 @@
 
     <div class="gap"></div>
 
-    <section id="maps" class="half-container">
+    <section id="maps" class="auto-container">
         <div class="flex-container">
             <div class="column-lg">
                 <h1 class="title3">Logga dina träningar i en karta!</h1>
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <section id="diagram" class="half-container">
+    <section id="diagram" class="auto-container">
         <div class="flex-container">
             <div class="column-sm">
                 <div class="map1"></div>
@@ -98,5 +98,4 @@
             <p>Prova logga dina resultat gratis i 3 månader genom att registrera dig!</p>
         </div>
     </section>
-
 </body>

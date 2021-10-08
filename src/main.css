@@ -47,6 +47,7 @@ body {
 .flex-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
     background-color: rgb(198, 217, 236, 0.6);
@@ -71,7 +72,7 @@ body {
 
 .map1 {
     width: 100%;
-    height: 100%;
+    height: 400px;
     background-color: gray;
 }
 
@@ -170,8 +171,21 @@ body {
     border-radius: 50%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
+    .auto-container, .half-container{
+        padding: 100px 20px;
+    }
+    
+    .navbar a {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     #map {
         height: 300px !important;
+    }
+    .column-lg, .column-sm  {
+        width: 100%;
     }
 }
