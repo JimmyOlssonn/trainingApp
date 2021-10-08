@@ -28,10 +28,11 @@
 <body>
     <section id="home" class="full-container">
         <div class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a href="#home">Hem</a>
+            <a href="#about">Om oss</a>
+            <a href="#price">Priser</a>
+            <a href="#price">Registrera</a>
+            <a id="test"href="#price">Logga in</a>
         </div>
         <h1 class="title1">trainingApp</h1>
         

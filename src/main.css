@@ -117,11 +117,15 @@ body {
 }
 
 .pricing tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: rgb(242, 242, 242, 1);
+}
+
+.pricing tr:nth-child(odd) {
+    background-color: rgb(255, 255, 255, 1);
 }
 
 .pricing tr:hover {
-    background-color: rgb(51, 105, 30, 0.3);
+    background-color: rgba(198, 217, 236, 0.6);
 }
 
 .pricing th {
