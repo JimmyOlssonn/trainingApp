@@ -99,22 +99,33 @@ try {
         <h1 class="title2">Medlemskap</h1>
         <div class="pricing">
             <table>
+                <thead>
+                    <tr>
+                        <th>Medlemskap</th>
+                        <th>Kostnad</th>
+                        <th>Bindningstid</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
-                        <td>Medlemskap 1 år</td>
+                        <td>Free</td>
                         <td>250kr / månaden</td>
+                        <td>Ingen bindingstid</td>
                     </tr>
                     <tr>
-                        <td>Medlemskap 3 år</td>
+                        <td>Pro</td>
                         <td>400kr / månaden</td>
+                        <td>3 månader</td>
                     </tr>
                     <tr>
-                        <td>Medlemskap 5 år</td>
+                        <td>Elite</td>
                         <td>550kr / månaden</td>
+                        <td>6 månader</td>
                     </tr>
                     <tr>
-                        <td>Medlemskap VIP</td>
+                        <td>VIP</td>
                         <td>800kr / månaden</td>
+                        <td>12 månader</td>
                     </tr>
                 </tbody>
             </table>

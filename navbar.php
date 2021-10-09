@@ -7,7 +7,7 @@
   <nav>
     <ul class="nav-links">
       <li><a href="/trainingApp/tjanster/">Tjänster</a></li>
-      <li><a href="#">Priser</a></li>
+      <li><a href="/trainingApp/priser/">Priser</a></li>
       <li><a href="#">Om oss</a></li>
     </ul>
   </nav>
