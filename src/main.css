@@ -69,6 +69,9 @@ section {
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     grid-gap: 1rem;
     margin-bottom: 100px;
+    border-top: solid lightgray 1px;
+    border-bottom: solid lightgray 1px;
+    padding: 100px 0px 100px 0px;
 }
 
 .gap {
@@ -194,6 +197,7 @@ input[type=text], input[type=password], input[type=email], select {
     border: 1px solid #ddd;
     padding: 20px;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .pricing th {
