@@ -2,7 +2,7 @@
   Navbar 
   Include with: include_once("navbar.php") 
  -->
-<header class="navbar">
+<header id="navbar" class="navbar">
   <a href="/trainingApp">trainingApp</a>
   <nav>
     <ul class="nav-links">

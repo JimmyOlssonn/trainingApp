@@ -44,10 +44,11 @@ try {
 </head>
 
 <body onload="startUp()">
+    <?php
+    include_once("navbar.php"); // includes the navbar
+    ?>
     <section id="home" class="full-container">
-        <?php
-        include_once("navbar.php"); // includes the navbar
-        ?>
+
         <div>
             <h1 class="title1">trainingApp</h1>
             <h1 class="title4">Börja din träning med oss</h1>

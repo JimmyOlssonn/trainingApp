@@ -1,14 +1,14 @@
 var chartData = [       // Example data for chart
-    ["2021-08-13",19],
-    ["2021-08-15",8],
-    ["2021-08-19",7],
-    ["2021-08-22",22],
-    ["2021-08-23",3],
-    ["2021-08-27",9],
+    ["2021-08-13", 19],
+    ["2021-08-15", 8],
+    ["2021-08-19", 7],
+    ["2021-08-22", 22],
+    ["2021-08-23", 3],
+    ["2021-08-27", 9],
 ];
 
 var mapData = [
-    ["2021-08-13",19,51.48749613695947,-0.11984002369270554, 51.487282354387425,-0.062465772452053876],
+    ["2021-08-13", 19, 51.48749613695947, -0.11984002369270554, 51.487282354387425, -0.062465772452053876],
 ]
 
 var displayLayer = L.layerGroup();
@@ -66,12 +66,27 @@ function showRunsDiagram() { // Create Chart
     });
 }
 
-function toggleLoginModal(){
+function toggleLoginModal() {
     $("#register-modal").hide();
     $("#login-modal").toggle();
 }
 
-function toggleRegModal(){
+function toggleRegModal() {
     $("#login-modal").toggle();
     $("#register-modal").toggle();
 }
+
+// Determine if the element is in the viewport
+function elementInViewport(el) {
+    var rect = el[0].getBoundingClientRect();
+    return (rect.top == $(window).height());
+}
+// On-scroll event listener
+$(window).on('scroll resize', function () {
+    if ($(window).scrollTop() == 0) {
+        $('#navbar').css("background-color", "");
+    }
+    else{
+        $('#navbar').css("background-color", "#262626");
+    }
+});
