@@ -111,6 +111,11 @@ a {
     text-decoration: none;
 }
 
+.title5 {
+    font-family: 'Gemunu Libre';
+    font-size: 30px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-around;

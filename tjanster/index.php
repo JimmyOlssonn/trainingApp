@@ -44,29 +44,29 @@ try {
         include_once("../navbar.php"); // includes the navbar
         ?>
         <section class="auto-container">
-            <div class="grid-container">
+            <div id="service" class="grid-container">
                 <div class="column">
-                    <h2 class="title3">Tjänster</h2>
+                    <h2 class="title5">Tjänster</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum diam, vel convallis ipsum. Maecenas varius ex odio, eget tempor risus vestibulum at. Vivamus interdum hendrerit nibh ut tempus. Maecenas eu egestas erat. Quisque efficitur varius velit sed volutpat.</p>
                 </div>
                 <div class="column">
-                    <h2 class="title3">Tjänster</h2>
+                    <h2 class="title5">Tjänster</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum diam, vel convallis ipsum. Maecenas varius ex odio, eget tempor risus vestibulum at. Vivamus interdum hendrerit nibh ut tempus. Maecenas eu egestas erat. Quisque efficitur varius velit sed volutpat.</p>
                 </div>
                 <div class="column">
-                    <h2 class="title3">Tjänster</h2>
+                    <h2 class="title5">Tjänster</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum diam, vel convallis ipsum. Maecenas varius ex odio, eget tempor risus vestibulum at. Vivamus interdum hendrerit nibh ut tempus. Maecenas eu egestas erat. Quisque efficitur varius velit sed volutpat.</p>
                 </div>
                 <div class="column">
-                    <h2 class="title3">Tjänster</h2>
+                    <h2 class="title5">Tjänster</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum diam, vel convallis ipsum. Maecenas varius ex odio, eget tempor risus vestibulum at. Vivamus interdum hendrerit nibh ut tempus. Maecenas eu egestas erat. Quisque efficitur varius velit sed volutpat.</p>
                 </div>
                 <div class="column">
-                    <h2 class="title3">Tjänster</h2>
+                    <h2 class="title5">Tjänster</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum diam, vel convallis ipsum. Maecenas varius ex odio, eget tempor risus vestibulum at. Vivamus interdum hendrerit nibh ut tempus. Maecenas eu egestas erat. Quisque efficitur varius velit sed volutpat.</p>
                 </div>
                 <div class="column">
-                    <h2 class="title3">Tjänster</h2>
+                    <h2 class="title5">Tjänster</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum diam, vel convallis ipsum. Maecenas varius ex odio, eget tempor risus vestibulum at. Vivamus interdum hendrerit nibh ut tempus. Maecenas eu egestas erat. Quisque efficitur varius velit sed volutpat.</p>
                 </div>
             </div>
