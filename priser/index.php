@@ -108,7 +108,7 @@ try {
                         </tr>
                     </tbody>
                 </table>
-                <p>Prova logga dina resultat gratis i 3 månader genom att registrera dig!</p>
+                <p class="title4">Prova logga dina resultat gratis i 3 månader genom att registrera dig!</p>
             </div>
         </section>
     </section>

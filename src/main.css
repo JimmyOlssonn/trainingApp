@@ -185,6 +185,8 @@ input[type=text], input[type=password], input[type=email], select {
 .pricing table {
     width: 100%;
     background-color: white;
+    border-top: solid #262626 1px;
+    border-bottom: solid #262626 1px;
 }
 
 .pricing td, .pricing th {
@@ -196,6 +198,9 @@ input[type=text], input[type=password], input[type=email], select {
 .pricing th {
     color: #262626 !important;
     text-align: left;
+    background-color: rgb(242, 242, 242, 1);
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .pricing tr:nth-child(even) {
@@ -203,17 +208,8 @@ input[type=text], input[type=password], input[type=email], select {
 }
 
 .pricing tr:nth-child(odd) {
-    background-color: rgb(255, 255, 255, 1);
-}
-
-.pricing tr:hover {
-    background-color: rgba(198, 217, 236, 0.6);
-}
-
-.pricing th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    color: white;
+    background-color: #262626;
+    color:white;
 }
 
 @media screen and (max-width: 1024px) {
