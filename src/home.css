@@ -28,6 +28,10 @@ body{
     color: white !important;
 }
 
+.navbar a{
+    color: white;
+}
+
 .pricing table {
     width: 100%;
     background-color: white;
