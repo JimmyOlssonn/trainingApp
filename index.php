@@ -48,7 +48,7 @@ try {
     include_once("navbar.php"); // includes the navbar
     ?>
     <section id="home" class="full-container">
-
+        <div></div>
         <div>
             <h1 class="title1">trainingApp</h1>
             <h1 class="title4">Börja din träning med oss</h1>

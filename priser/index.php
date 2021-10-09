@@ -68,7 +68,7 @@ try {
                     </ul>
                 </div>
                 <div class="column">
-                    <h2 class="title5">Medlemskap VIP</h2>
+                    <h2 class="title5">Medlemskap VIP <i class="fas fa-gem fa-sm"></i></h2>
                     <ul>
                         <li>Lägga till oändligt med träningar i veckan</li>
                         <li>Se diagram för ett år tillbaka</li>
