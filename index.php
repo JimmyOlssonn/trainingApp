@@ -8,7 +8,7 @@ try {
         //echo "Connected to the app_jimmy database successfully!";
     }
 } catch (PDOException $e) {
-    echo $e->getMessage();
+    // echo $e->getMessage();
 }
 ?>
 <!doctype html>
@@ -61,30 +61,39 @@ try {
     </section>
 
     <section id="about" class="auto-container">
-        <h1 class="title2">Om trainingApp</h1>
-        <div class="box-container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum diam, vel convallis ipsum. Maecenas varius ex odio, eget tempor risus vestibulum at. Vivamus interdum hendrerit nibh ut tempus. Maecenas eu egestas erat. Quisque efficitur varius velit sed volutpat. Phasellus ornare egestas aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc lacinia massa sed lorem sodales venenatis. Quisque est neque, sodales viverra diam at, molestie semper ligula. Praesent vestibulum commodo iaculis. Nullam pellentesque at urna a aliquet. Fusce id sem turpis. Donec vitae tellus eget sem placerat luctus. Etiam sed velit magna.</p>
+        <h2 class="title3">Om trainingApp</h2>
+        <div class="grid-container">
+            <div class="column">
+                <p>TrainingingApp är ett enkelt sätt att logga din träning med olika verktyg och tjänster som vi erbjuder. Logga din träning i form av minnesnoteringar, kilometer, tid och se dina resultat i ett diagram för att nå dina mål. Du kan även välja mellan medlemskapen för att se vilka features du vill ha, kanske vill du bara logga för att hålla koll den senaste veckan eller ett helt år? du väljer själv! </p>
+                <p> Prova logga din träning Gratis i tre månader utan bindningstid.</p>
+                <p> För mer information om våra erbjudanden och medlemskap för din träning, läs mer på fliken "Tjänster" i menyn.</p>
+            </div>
+            <div class="column-img">
+                <div id="bild1"></div>
+            </div>
         </div>
     </section>
 
     <div class="gap"></div>
 
     <section id="maps" class="auto-container">
-        <div class="flex-container">
-            <div class="column-lg">
-                <h2 class="title3">Logga dina träningar i en karta!</h1>
+        <div class="grid-container">
+            <div class="column">
+                <h2 class="title3">Logga dina träningar i en karta!</h2>
+                <p>Använd kartan för att logga dina kilometer och din tid! Genom att sätta ut start och slutpunkt kan du logga antal kilometer på din egna tid. Logga när du vill och hur du vill, backa tillbakja och se dina tidigare resultat.</p>
             </div>
-            <div class="column-sm">
+            <div class="column">
                 <div id="display-map" class="map1"></div>
             </div>
         </div>
 
-        <div id="diagram" class="flex-container">
-            <div class="column-sm">
+        <div id="diagram" class="grid-container">
+            <div class="column">
                 <canvas id="display-diagram" style="position: relative; height:40vh;"></canvas>
             </div>
-            <div class="column-lg">
-                <h2 class="title3">Se dina resultat i ett diagram!</h1>
+            <div class="column">
+                <h2 class="title3">Se dina resultat i ett diagram!</h2>
+                <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat.</p>
             </div>
         </div>
     </section>
@@ -130,7 +139,7 @@ try {
                     </tr>
                 </tbody>
             </table>
-            <p>Prova logga dina resultat gratis i 3 månader genom att registrera dig!</p>
+            <p class="title4">Prova logga dina resultat gratis i 3 månader genom att registrera dig!</p>
         </div>
     </section>
 

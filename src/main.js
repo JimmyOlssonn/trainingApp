@@ -23,6 +23,13 @@ function mapStart() {
     // Create the map
     map = L.map('display-map').setView([51.505, -0.09], 12);
     map.addLayer(displayLayer);
+    map.dragging.disable();
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.boxZoom.disable();
+    map.keyboard.disable();
+    map.removeControl(map.zoomControl);
 
     displayLayer.clearLayers();
     for (let i = 0; i < mapData.length; i++) {
@@ -86,7 +93,7 @@ $(window).on('scroll resize', function () {
     if ($(window).scrollTop() == 0) {
         $('#navbar').css("background-color", "");
     }
-    else{
+    else {
         $('#navbar').css("background-color", "#262626");
     }
 });

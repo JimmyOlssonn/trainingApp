@@ -8,7 +8,7 @@ try {
         //echo "Connected to the app_jimmy database successfully!";
     }
 } catch (PDOException $e) {
-    echo $e->getMessage();
+    // echo $e->getMessage();
 }
 ?>
 <!doctype html>
@@ -56,16 +56,21 @@ try {
                 </div>
                 <div class="column">
                     <h2 class="title1"><i class="fas fa-dollar-sign"></i></h2>
-                    <p>Välj det medlemskap som passar dig och din ekonomi bäst! betala mer och få mer data samlad från dina egna loggar. Alla medlemskap och betalningssätt är säkra. Vill du prova gratis? välj medlemskapet utan bindningstid och testa logga din träning!</p>
+                    <p>Välj det medlemskap som passar dig och din ekonomi bäst! Vill du bara pröve på att logga din träning? välj då gratisversionen utan bindningstid. Du kan se alla erbjudanden och priser uten fliken "Priser" i menyn.</p>
                 </div>
                 <div class="column">
                     <h2 class="title1"><i class="far fa-calendar-check"></i></h2>
                     <p>Använd kartan för att logga dina kilometer och din tid! Genom att sätta ut start och slutpunkt kan du logga antal kilometer på din egna tid. Logga när du vill och hur du vill, backa tillbakja och se dina tidigare resultat.</p>
                 </div>
                 <div class="column">
-                    <h2 class="title1"><i class="fas fa-chart-line"></i></i></h2>
-                    <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat</p>
+                    <h2 class="title1"><i class="fas fa-chart-line"></i></h2>
+                    <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat.</p>
                 </div>
+                <div class="column">
+                    <h2 class="title1"><i class="far fa-handshake"></i></h2>
+                    <p>Välj medlemskap som passar dig och din träning, Beroende på hur aktiv du är. Du väljer helt själv vilket medlemskap som passar dig bäst beroende på över hur lång tid du behöver se loggade resultat. Kanske räcker en vecka? eller behöver du se resultat över det senaste året? se under fliken "Priser" för att läsa om medlemskapen.</p>
+                </div>
+               
                
             </div>
         </section>
