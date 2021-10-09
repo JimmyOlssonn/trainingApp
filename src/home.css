@@ -50,6 +50,6 @@ body {
     color: white !important;
 }
 
-.navbar a {
-    color: white;
+.navbar{
+    background-color: transparent;
 }

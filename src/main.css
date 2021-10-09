@@ -133,13 +133,14 @@ section {
     left: 0;
     right: 0;
     z-index: 100;
+    background-color: #262626;
 }
 
 .navbar a, .navbar button {
     font-family: 'Gemunu Libre';
     font-weight: 500;
     font-size: 24px;
-    color: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }

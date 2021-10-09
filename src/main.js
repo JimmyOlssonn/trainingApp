@@ -91,7 +91,7 @@ function elementInViewport(el) {
 // On-scroll event listener
 $(window).on('scroll resize', function () {
     if ($(window).scrollTop() == 0) {
-        $('#navbar').css("background-color", "");
+        $('#navbar').css("background-color", "transparent");
     }
     else {
         $('#navbar').css("background-color", "#262626");
