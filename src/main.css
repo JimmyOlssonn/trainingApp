@@ -43,7 +43,8 @@ section {
 .box-container {
     width: 100%;
     background-color: rgb(198, 217, 236, 0.3);
-    border-radius: 20px 20px 20px 20px;;
+    border-radius: 20px 20px 20px 20px;
+    ;
     margin: auto;
     line-height: 2;
     font-size: 18px;
@@ -54,24 +55,38 @@ section {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    
     box-sizing: border-box;
-    padding: 10px;
+    padding: 100px 0px 100px 0px;
     margin-bottom: 100px;
     line-height: 2;
     font-size: 18px;
+    border-top: solid lightgray 1px;
+    border-bottom: solid lightgray 1px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     grid-gap: 1rem;
     margin-bottom: 100px;
     border-top: solid lightgray 1px;
     border-bottom: solid lightgray 1px;
     padding: 100px 0px 100px 0px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    margin-bottom: 100px;
+    line-height: 2;
+    font-size: 18px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .gap {
@@ -80,22 +95,18 @@ section {
 }
 
 .column-lg {
-    width: 60%;
-    padding: 15px;
-    box-sizing: border-box;
-    background-color: rgb(198, 217, 236, 0.3);
-    border-radius: 20px 20px 20px 20px;;
+    width: 50%;
 }
 
 .column-sm {
-    width: 40%;
+    width: 50%;
 }
 
 .column {
     background-color: rgb(198, 217, 236, 0.3);
     box-sizing: border-box;
     padding: 1rem;
-    border-radius: 20px 20px 20px 20px; 
+    border-radius: 20px 20px 20px 20px;
 }
 
 .title1 {
@@ -207,7 +218,7 @@ section {
 
 .pricing tr:nth-child(odd) {
     background-color: #262626;
-    color:white;
+    color: white;
 }
 
 @media screen and (max-width: 1024px) {
@@ -217,6 +228,9 @@ section {
     .navbar a {
         margin: 0px;
     }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -225,5 +239,8 @@ section {
     }
     .column-lg, .column-sm {
         width: 100%;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
     }
 }

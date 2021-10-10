@@ -13,6 +13,7 @@ var mapData = [
 
 var displayLayer = L.layerGroup();
 var map;
+var profileDiagram;
 
 function startUp() { // body onload function
     mapStart();
@@ -51,7 +52,7 @@ function showRunsDiagram() { // Create Chart
         dates.push(chartData[i][0]);
     }
     var ctx = document.getElementById('display-diagram');
-    var profileDiagram = new Chart(ctx, {
+    profileDiagram = new Chart(ctx, {
         type: 'line',
         data: {
             labels: dates,

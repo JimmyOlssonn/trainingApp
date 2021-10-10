@@ -45,7 +45,7 @@ try {
         ?>
         <section class="auto-container">
         <h2 class="title1">Tjänster</h2>
-            <div id="service" class="grid-container">
+            <div id="service" class="grid-container grid-3">
                 <div class="column">
                     <h2 class="title1"><i class="far fa-clock"></i></h2>
                     <p>Lägg in dina resultat när du vill! vilken tid på dygnet som helst. Träna när det passar dig som bäst och ditt egna schema. Sätt upp ditt egna träningschema vecka för vecka för att nå dina mål.</p>

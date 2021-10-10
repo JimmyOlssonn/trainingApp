@@ -62,7 +62,7 @@ try {
 
     <section id="about" class="auto-container">
         <h2 class="title3">Om trainingApp</h2>
-        <div class="grid-container">
+        <div class="grid-container grid-2">
             <div class="column">
                 <p>TrainingingApp är ett enkelt sätt att logga din träning med olika verktyg och tjänster som vi erbjuder. Logga din träning i form av minnesnoteringar, kilometer, tid och se dina resultat i ett diagram för att nå dina mål. Du kan även välja mellan medlemskapen för att se vilka features du vill ha, kanske vill du bara logga för att hålla koll den senaste veckan eller ett helt år? du väljer själv! </p>
                 <p> Prova logga din träning Gratis i tre månader utan bindningstid.</p>
@@ -77,7 +77,7 @@ try {
     <div class="gap"></div>
 
     <section id="maps" class="auto-container">
-        <div class="grid-container">
+        <div class="grid-container grid-2">
             <div class="column">
                 <h2 class="title3">Logga dina träningar i en karta!</h2>
                 <p>Använd kartan för att logga dina kilometer och din tid! Genom att sätta ut start och slutpunkt kan du logga antal kilometer på din egna tid. Logga när du vill och hur du vill, backa tillbakja och se dina tidigare resultat.</p>
@@ -87,11 +87,11 @@ try {
             </div>
         </div>
 
-        <div id="diagram" class="grid-container">
-            <div class="column">
-                <canvas id="display-diagram" style="position: relative; height:40vh;"></canvas>
+        <div id="diagram" class="flex-container">
+            <div class="column-sm">
+                <canvas id="display-diagram"></canvas>
             </div>
-            <div class="column">
+            <div class="column-lg">
                 <h2 class="title3">Se dina resultat i ett diagram!</h2>
                 <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat.</p>
             </div>
@@ -157,6 +157,6 @@ try {
     </div>
 
     <div id="register-modal" class="modal">
-        
+
     </div>
 </body>

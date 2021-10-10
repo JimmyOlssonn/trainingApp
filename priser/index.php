@@ -45,7 +45,7 @@ try {
         ?>
         <section class="auto-container">
             <h1 class="title2">Medlemskap</h1>
-            <div id="prices" class="grid-container">
+            <div id="prices" class="grid-container grid-4">
                 <div class="column">
                     <h2 class="title5">Medlemskap Free</h2>
                     <ul>
