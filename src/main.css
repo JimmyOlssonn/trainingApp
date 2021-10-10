@@ -310,4 +310,7 @@ button {
         font-size: 14px !important;
         padding: 5px !important;
     }
+    .column-flex{
+        width: 100%;
+    }
 }
