@@ -43,83 +43,95 @@ try {
 <body onload="startUp()">
     <section>
         <?php
-            include_once("../navbar.php"); // includes the navbar   
-            include_once("../modal.php"); // includes modal
+        include_once("../navbar.php"); // includes the navbar   
+        include_once("../modal.php"); // includes modal
         ?>
-        <section class="auto-container">
-            <h1 class="title3">Add new run</h1>
-            <div class="grid-container grid-2">
-                <div>
-                    <div id="map"></div>
-                    <button id="startPoint" type="button" onclick="changeMarkerType('start')">Start-point</button>
-                    <button id="endPoint" type="button" onclick="changeMarkerType('stop')">End-point</button>
-                    <label id="markerTypeText">You are now placing a start marker</label>
+        <section class="flex-content">
+            <section class="sidebar-container">
+                <div class="sidebar">
+                    <a>Profil</a>
+                    <a>Lägg till träning</a>
+                    <a>Se diagram</a>
+                    <a>Inställningar</a>
                 </div>
-                <div>
-                    <form action="<?php echo htmlspecialchars("../controller.php"); ?>" method="post" name="addRun">
-                        <div class="row">
-                            <div>
+            </section>
+            <section class="auto-container">
+                <h1 class="title3">Add new run</h1>
+                <div class="grid-container grid-2">
+                    <div>
+                        <div id="map"></div>
+                        <button id="startPoint" type="button" onclick="changeMarkerType('start')">Start-point</button>
+                        <button id="endPoint" type="button" onclick="changeMarkerType('stop')">End-point</button>
+                        <label id="markerTypeText">You are now placing a start marker</label>
+                    </div>
+                    <div>
+                        <form action="<?php echo htmlspecialchars("../controller.php"); ?>" method="post" name="addRun">
+                            <div class="row">
                                 <div>
-                                    <label>Typ av träning</label>
-                                    <select name="newType" required>
-                                        <option value="Promenad">Promenad</option>
-                                        <option value="Löpning">Löpning</option>
-                                        <option value="Cykling">Cykling</option>
-                                        <option value="Skidor">Skidor</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newLength">Sträcka</label>
-                                    <input type="text" id="newLength" name="newLength" placeholder="skrivet i kilometer">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newDate">Datum</label>
-                                    <input type="date" id="newDate" name="newDate">
-                                </div>
+                                    <div>
+                                        <label>Typ av träning</label>
+                                        <select name="newType" required>
+                                            <option value="Promenad">Promenad</option>
+                                            <option value="Löpning">Löpning</option>
+                                            <option value="Cykling">Cykling</option>
+                                            <option value="Skidor">Skidor</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="newLength">Sträcka</label>
+                                        <input type="text" id="newLength" name="newLength" placeholder="skrivet i kilometer">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="newDate">Datum</label>
+                                        <input type="date" id="newDate" name="newDate">
+                                    </div>
 
-                                <div class="mb-3">
-                                    <label for="newCom">Kommentar</label>
-                                    <textarea id="exampleFormControlTextarea1" name="newCom"></textarea>
+                                    <div class="mb-3">
+                                        <label for="newCom">Kommentar</label>
+                                        <textarea id="exampleFormControlTextarea1" name="newCom"></textarea>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" id="exampleCheck1">
+                                        <label for="exampleCheck1">Använd kartan</label>
+                                    </div>
                                 </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" id="exampleCheck1">
-                                    <label for="exampleCheck1">Använd kartan</label>
+                                <div>
+                                    <input type="hidden" id="startX" name="startX">
+                                    <input type="hidden" id="startY" name="startY">
+                                    <input type="hidden" id="stopX" name="stopX">
+                                    <input type="hidden" id="stopY" name="stopY">
                                 </div>
+                                <button type="submit">Submit</button>
                             </div>
-                            <div>
-                                <input type="hidden" id="startX" name="startX">
-                                <input type="hidden" id="startY" name="startY">
-                                <input type="hidden" id="stopX" name="stopX">
-                                <input type="hidden" id="stopY" name="stopY">
-                            </div>
-                            <button type="submit">Submit</button>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <h1 class="title3">Your runs</h1>
-            <div class="grid-container grid-2">
-                <div>
-                    <div id="map2"></div>
-                </div>
-                <div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Träning</th>
-                                <th>Distans</th>
-                                <th>Datum</th>
-                            </tr>
-                        </thead>
-                        <tbody id="runsList">
+                <h1 class="title3">Your runs</h1>
+                <div class="grid-container grid-2">
+                    <div>
+                        <div id="map2"></div>
+                    </div>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Träning</th>
+                                    <th>Distans</th>
+                                    <th>Datum</th>
+                                </tr>
+                            </thead>
+                            <tbody id="runsList">
 
-                        </tbody>
-                    </table>
-                    <button type="submit" onclick="showAllRuns()">Mina runs!</button>
+                            </tbody>
+                        </table>
+                        <button type="submit" onclick="showAllRuns()">Mina runs!</button>
+                    </div>
                 </div>
-            </div>
+                <canvas id="profileDiagram"></canvas>
+            </section>
         </section>
+
     </section>
 </body>
 

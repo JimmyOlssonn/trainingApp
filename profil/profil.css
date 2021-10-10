@@ -1,5 +1,5 @@
 #map {
-    height: 600px;
+    height: 400px;
     min-width: 10px;
 }
 
@@ -13,4 +13,34 @@
     width: 200px;
     background-color: #e2e2e2;
     border-radius: 50%;
+}
+
+.auto-container{
+    padding: 50px;
+}
+
+.flex-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar a{
+    text-align: center;
+    width: 80%;
+    padding: 70px 14px;
+    font-size: 22px;
+    border-bottom: solid gray 0.5px;
+}
+
+.sidebar-container{
+    padding-top: 46px;
+    width: 18rem;
+    z-index: 10;
+    background-color: #262626;
 }

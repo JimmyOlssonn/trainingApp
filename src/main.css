@@ -16,6 +16,10 @@ a {
     color: white;
 }
 
+h1,h2{
+    margin: 1rem;
+}
+
 section {
     background-color: white;
 }
@@ -33,10 +37,10 @@ input[type=text], input[type=password], input[type=email], select, input[type=da
 }
 
 button {
-    padding: 10px 25px;
+    padding: 14px 25px;
     background-color: #262626;
-    border-radius: 50px;
     border: none;
+    border-radius: 50px;
     color: white;
     font-size: 16px;
 }
@@ -112,10 +116,10 @@ button {
 /* columns */
 
 .column-lg {
-    width: 50%;
+    padding: 1rem;
 }
 
-.column-sm {
+.column-flex {
     width: 50%;
 }
 
@@ -166,7 +170,7 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 100000;
     background-color: #262626;
 }
 
@@ -293,5 +297,17 @@ button {
     }
     .register-container {
         padding: 0px !important;
+    }
+    .flex-content{
+        flex-wrap: wrap;
+    }
+    .sidebar-container {
+        width: 100% !important;
+        height: auto !important;
+        
+    }
+    .sidebar a{
+        font-size: 14px !important;
+        padding: 5px !important;
     }
 }

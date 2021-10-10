@@ -43,9 +43,10 @@ try {
     <section>
         <?php
         include_once("../navbar.php"); // includes the navbar
+        include_once("../modal.php"); // includes modal
         ?>
         <section class="auto-container">
-        <h2 class="title1">Tjänster</h2>
+            <h2 class="title1">Tjänster</h2>
             <div id="service" class="grid-container grid-3">
                 <div class="column">
                     <h2 class="title1"><i class="far fa-clock"></i></h2>
@@ -71,8 +72,8 @@ try {
                     <h2 class="title1"><i class="far fa-handshake"></i></h2>
                     <p>Välj medlemskap som passar dig och din träning, Beroende på hur aktiv du är. Du väljer helt själv vilket medlemskap som passar dig bäst beroende på över hur lång tid du behöver se loggade resultat. Kanske räcker en vecka? eller behöver du se resultat över det senaste året? se under fliken "Priser" för att läsa om medlemskapen.</p>
                 </div>
-               
-               
+
+
             </div>
         </section>
     </section>

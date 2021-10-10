@@ -5,7 +5,7 @@
 
 <!-- Login Modal -->
 <div id="login-modal" class="modal">
-  <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="login">
+  <form action="<?php echo htmlspecialchars("/trainingApp/controller.php"); ?>" method="post" name="login">
     <h2>Logga in</h2>
     <label for="logName">Användarnamn</label>
     <input type="text" id="logName" name="logName">

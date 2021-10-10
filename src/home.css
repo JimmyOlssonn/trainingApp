@@ -23,11 +23,6 @@ body {
     border-radius: 20px 20px 20px 20px;
 }
 
-.column {
-    padding: 30px;
-    background-color: white;
-}
-
 #home {
     display: flex;
     flex-direction: column;

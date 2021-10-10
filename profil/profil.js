@@ -13,7 +13,7 @@ var marker;
 
 function startUp() { // body onload function
     mapStart();
-    // showRunsDiagram();
+    showRunsDiagram();
     // $.ajax({
     //     type: "GET",
     //     url: "controller.php",
@@ -142,43 +142,43 @@ function showAllRuns() {
     });
 }
 
-// function showRunsDiagram() {
-//     $.ajax({
-//         type: "GET",
-//         url: "controller.php",
-//         data: "getRunsDiagram",
-//         dataType: "json",
-//         success: function (response) {
-//             var lengths = [];
-//             var dates = [];
-//             for (var i = 0; i < response.length; i++) {
-//                 lengths.push(parseInt(response[i]["length"], 10));
-//                 dates.push(response[i]["date"] + " " + response[i]["type"]);
-//             }
-//             var ctx = document.getElementById('profileDiagram');
-//             var profileDiagram = new Chart(ctx, {
-//                 type: 'line',
-//                 data: {
-//                     labels: dates,
-//                     datasets: [{
-//                         label: 'Your latest runs',
-//                         data: lengths,
-//                         fill: false,
-//                         borderColor: '#39A2DB',
-//                         tension: 0.1
-//                     }]
-//                 },
-//                 options: {
-//                     scales: {
-//                         y: {
-//                             beginAtZero: true
-//                         }
-//                     }
-//                 }
-//             });
-//         }
-//     });
-// }
+function showRunsDiagram() {
+    $.ajax({
+        type: "GET",
+        url: "/trainingApp/controller.php",
+        data: "getRunsDiagram",
+        dataType: "json",
+        success: function (response) {
+            var lengths = [];
+            var dates = [];
+            for (var i = 0; i < response.length; i++) {
+                lengths.push(parseInt(response[i]["length"], 10));
+                dates.push(response[i]["date"] + " " + response[i]["type"]);
+            }
+            var ctx = document.getElementById('profileDiagram');
+            var profileDiagram = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Your latest runs',
+                        data: lengths,
+                        fill: false,
+                        borderColor: '#39A2DB',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    });
+}
 
 // $(document).ready(function () {
 

@@ -64,7 +64,7 @@ if (isset($_POST["logName"])) { // User login
             $_SESSION["City"] = $user['City'];
             $_SESSION["Country"] = $user['Country'];
             $_SESSION["Membership"] = $user['Membership'];
-            header("Location:profile.php");
+            header("Location:/trainingApp/profil/");
             exit();
         } else {
             echo "Wrong username or password.";
