@@ -324,4 +324,7 @@ button {
         left: 2%;
         width: 96%;
     }
+    .register-container {
+        padding: 0px !important;
+    }
 }
