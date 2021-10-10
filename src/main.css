@@ -218,6 +218,7 @@ button {
     background-color: white;
     border-radius: 10px;
     display: none;
+    box-shadow: 5px 5px 20px #262626;
 }
 
 /* pricing table */

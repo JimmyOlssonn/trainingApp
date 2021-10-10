@@ -9,12 +9,12 @@ input[type=text], input[type=password], input[type=email], select {
     box-sizing: border-box;
     margin: 6% auto 0;
     width: 850px;
-    padding: 100px;
+    padding: 80px 100px;
     background-color: #f2f2f2;
     position: relative;
     border-top: solid black 1px;
     border-bottom: solid black 1px;
-    box-shadow: 5px 5px 8px #8c8c8c;
+    box-shadow: 5px 5px 20px #8c8c8c;
 }
 
 .column-half {
