@@ -2,7 +2,9 @@
 * {
     box-sizing: border-box;
 }
+
 /* General CSS */
+
 body {
     padding: 0%;
     margin: 0%;
@@ -168,7 +170,7 @@ button {
 
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
@@ -178,7 +180,29 @@ button {
     background-color: #262626;
 }
 
-.navbar a, .navbar button {
+.navbar a {
+    font-family: 'Gemunu Libre';
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.icon {
+    display: none;
+}
+
+.active a {
+    display: block !important;
+}
+
+.meny {
+    display: none;
+}
+
+/* .navbar a, .navbar button {
     font-family: 'Gemunu Libre';
     font-weight: 500;
     font-size: 24px;
@@ -198,7 +222,7 @@ button {
 .nav-links li {
     display: inline-block;
     padding: 0px 20px;
-}
+} */
 
 .bottom-navbar {
     display: flex;
@@ -266,16 +290,38 @@ button {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
+    .modal{
+        left: 10%;
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 768px) {
     #map {
         height: 300px !important;
     }
-    .column-lg, .column-sm {
-        width: 100%;
-    }
     .grid-container {
         grid-template-columns: 1fr;
+    }
+    .navbar:not(.meny) {
+        background-color: #262626 !important;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar a {
+        display: none;
+    }
+    .meny {
+        width: 100%;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+    .meny a {
+        display: block !important;
+    }
+    .modal{
+        left: 2%;
+        width: 96%;
     }
 }

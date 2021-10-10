@@ -33,6 +33,7 @@ try {
     <title>trainingApp</title>
 
     <script src="profil.js"></script>
+    <script src="../src/function.js"></script>
     <link rel="stylesheet" href="../src/main.css">
     <link rel="stylesheet" href="profil.css">
 

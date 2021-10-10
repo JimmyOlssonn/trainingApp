@@ -74,16 +74,6 @@ function showRunsDiagram() { // Create Chart
     });
 }
 
-function toggleLoginModal() {
-    $("#register-modal").hide();
-    $("#login-modal").toggle();
-}
-
-function toggleRegModal() {
-    $("#login-modal").toggle();
-    $("#register-modal").toggle();
-}
-
 // Determine if the element is in the viewport
 function elementInViewport(el) {
     var rect = el[0].getBoundingClientRect();
@@ -98,3 +88,5 @@ $(window).on('scroll resize', function () {
         $('#navbar').css("background-color", "#262626");
     }
 });
+
+

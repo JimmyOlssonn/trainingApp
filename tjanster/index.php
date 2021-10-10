@@ -32,6 +32,7 @@ try {
 
     <title>trainingApp</title>
 
+    <script src="../src/function.js"></script>
     <link rel="stylesheet" href="../src/main.css">
     <link rel="stylesheet" href="tjanster.css">
 

@@ -39,6 +39,7 @@ try {
     <link rel="stylesheet" href="src/main.css">
     <link rel="stylesheet" href="src/home.css">
 
+    <script src="src/function.js"></script>
     <script src="src/main.js"></script>
 
 </head>
