@@ -101,7 +101,7 @@ if (isset($_POST["newDate"])) { // Add new Run
         ]);
     }
     print_r($statement->errorInfo());
-    header("Location:profile.php");
+    header("Location:/trainingApp/profil/");
     exit();
 }
 if (isset($_GET["getRuns"])) { // Get existing latitude, type, date and length from a users runs to add to map and table

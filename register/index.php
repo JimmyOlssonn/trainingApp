@@ -40,30 +40,32 @@ try {
 
 <body>
     <?php
-    include_once("../navbar.php"); // includes the navbar
+        include_once("../navbar.php"); // includes the navbar   
+        include_once("../modal.php"); // includes modal
     ?>
     <section class="auto-contianer">
         <div class="register-container">
             <h2 class="title3">Registrera dig</h2>
+            <p>Obligatoriska fält *</p>
             <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register">
                 <div class="row">
                     <div class="column-half">
-                        <label for="firstName">Förnamn</label>
+                        <label for="firstName">Förnamn*</label>
                         <input type="text" name="regForname" class="half" required>
                     </div>
                     <div class="column-half">
-                        <label for="lastName">Efternamn</label>
+                        <label for="lastName">Efternamn*</label>
                         <input type="text" name="regLastname" class="half" placeholder="" value="" required>
                     </div>
                 </div>
-                <label for="username">Användarnamn</label>
+                <label for="username">Användarnamn*</label>
                 <input type="text" name="regUsername" required>
-                <label for="regEmail">E-post</label>
+                <label for="regEmail">E-post*</label>
                 <input type="email" name="regEmail" placeholder="example@example.com" required>
-                <label for="regPassword">Lösenord</label>
+                <label for="regPassword">Lösenord*</label>
                 <input type="password" name="regPassword" required>
 
-                <label for="Gender">Kön</label><br>
+                <label for="Gender">Kön*</label><br>
                 <div>
                     <input type="radio" name="regGender" id="regGender1" value="Male">
                     <label for="regGender1">Man</label>
@@ -78,22 +80,22 @@ try {
                 </div>
                 <div class="row">
                     <div class="column-half">
-                        <label for="regCity">Stad</label>
+                        <label for="regCity">Stad*</label>
                         <input type="text" name="regCity" placeholder="" value="">
                     </div>
                     <div class="column-half">
-                        <label for="regCountry">Land</label>
+                        <label for="regCountry">Land*</label>
                         <input type="text" name="regCountry" placeholder="" value="">
                     </div>
                 </div>
-                <label for="regMembership">Medlemskap</label>
+                <label for="regMembership">Välj Medlemskap</label>
                 <select name="regMembership" required>
                     <option value="Free">Free</option>
                     <option value="Pro">Pro</option>
                     <option value="Elite">Elite</option>
                     <option value="VIP">VIP</option>
                 </select>
-                <button type="submit">Registrera</button>
+                <button type="submit">Registrera!</button>
             </form>
         </div>
     </section>

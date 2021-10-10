@@ -1,0 +1,32 @@
+input[type=text], input[type=password], input[type=email], select, input[type=date], textarea {
+    width: 100%;
+    padding: 8px 8px;
+    font-size: 16px;
+    margin: 8px 0px;
+}
+
+button {
+    padding: 10px 25px;
+    background-color: #262626;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+#map {
+    height: 600px;
+    min-width: 10px;
+}
+
+#map2 {
+    height: 400px;
+    min-width: 10px;
+}
+
+#exampleImg {
+    height: 200px;
+    width: 200px;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+}

@@ -16,7 +16,7 @@
     if (isset($_SESSION['Username'])) { // If a user is logged in
       echo '
         <ul class="nav-links">
-          <li><a href="profile.php">' . $_SESSION['Username'] . '</a></li>
+          <li><a href="/trainingApp/profil/">' . $_SESSION['Username'] . '</a></li>
           <li><a href="logout.php">Logga ut</a></li>
         </ul>
           ';

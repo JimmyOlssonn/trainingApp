@@ -13,25 +13,25 @@ var marker;
 
 function startUp() { // body onload function
     mapStart();
-    showRunsDiagram();
-    $.ajax({
-        type: "GET",
-        url: "controller.php",
-        data: "getSession",
-        dataType: "json",
-        success: function (response) {
-            session = response;
-            console.log(session);
-            $('#changeMembership').val(session).change();
-        }
+    // showRunsDiagram();
+    // $.ajax({
+    //     type: "GET",
+    //     url: "controller.php",
+    //     data: "getSession",
+    //     dataType: "json",
+    //     success: function (response) {
+    //         session = response;
+    //         console.log(session);
+    //         $('#changeMembership').val(session).change();
+    //     }
 
-    });
+    // });
 }
 
 function mapStart() {
     // Create the map and adding layers
     map = L.map('map').setView([51.505, -0.09], 12);
-    map2 = L.map('map2').setView([51.505, -0.09], 12);
+    map2 = L.map('map2').setView([51.505, -0.09], 10);
     map.addLayer(startLayer);
     map.addLayer(stopLayer);
     map.addLayer(lineLayer);
@@ -112,7 +112,7 @@ function changeMarkerType(newType) { // Change the varible markerType and change
 function showAllRuns() {
     $.ajax({
         type: "GET",
-        url: "controller.php",
+        url: "../controller.php",
         data: "getRuns",
         dataType: "json",
         success: function (response) {
@@ -142,44 +142,44 @@ function showAllRuns() {
     });
 }
 
-function showRunsDiagram() {
-    $.ajax({
-        type: "GET",
-        url: "controller.php",
-        data: "getRunsDiagram",
-        dataType: "json",
-        success: function (response) {
-            var lengths = [];
-            var dates = [];
-            for (var i = 0; i < response.length; i++) {
-                lengths.push(parseInt(response[i]["length"], 10));
-                dates.push(response[i]["date"] + " " + response[i]["type"]);
-            }
-            var ctx = document.getElementById('profileDiagram');
-            var profileDiagram = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: dates,
-                    datasets: [{
-                        label: 'Your latest runs',
-                        data: lengths,
-                        fill: false,
-                        borderColor: '#39A2DB',
-                        tension: 0.1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        }
-    });
-}
+// function showRunsDiagram() {
+//     $.ajax({
+//         type: "GET",
+//         url: "controller.php",
+//         data: "getRunsDiagram",
+//         dataType: "json",
+//         success: function (response) {
+//             var lengths = [];
+//             var dates = [];
+//             for (var i = 0; i < response.length; i++) {
+//                 lengths.push(parseInt(response[i]["length"], 10));
+//                 dates.push(response[i]["date"] + " " + response[i]["type"]);
+//             }
+//             var ctx = document.getElementById('profileDiagram');
+//             var profileDiagram = new Chart(ctx, {
+//                 type: 'line',
+//                 data: {
+//                     labels: dates,
+//                     datasets: [{
+//                         label: 'Your latest runs',
+//                         data: lengths,
+//                         fill: false,
+//                         borderColor: '#39A2DB',
+//                         tension: 0.1
+//                     }]
+//                 },
+//                 options: {
+//                     scales: {
+//                         y: {
+//                             beginAtZero: true
+//                         }
+//                     }
+//                 }
+//             });
+//         }
+//     });
+// }
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-});
+// });
