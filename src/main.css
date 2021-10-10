@@ -25,7 +25,7 @@ section {
     width: 100%;
 }
 
-input[type=text], input[type=password], input[type=email], select {
+input[type=text], input[type=password], input[type=email], select, input[type=date], textarea {
     width: 100%;
     padding: 8px 8px;
     font-size: 16px;
@@ -46,14 +46,12 @@ button {
 .full-container {
     height: 100vh;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .half-container {
     height: 70vh;
     width: 100%;
     padding: 100px 150px;
-    box-sizing: border-box;
     display: block;
 }
 
@@ -61,28 +59,21 @@ button {
     min-height: 70vh;
     width: 100%;
     padding: 100px 150px;
-    box-sizing: border-box;
     display: block;
 }
 
 /* Smaller and flex/grid containers */
 
-.box-container {
+.container {
     width: 100%;
-    background-color: rgb(198, 217, 236, 0.3);
-    border-radius: 20px 20px 20px 20px;
-    ;
-    margin: auto;
     line-height: 2;
     font-size: 18px;
-    box-sizing: border-box;
-    padding: 6% 10%;
+    padding: 100px 0px 100px 0px;
 }
 
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
     padding: 100px 0px 100px 0px;
     margin-bottom: 100px;
     line-height: 2;
@@ -130,7 +121,6 @@ button {
 
 .column {
     background-color: rgb(198, 217, 236, 0.3);
-    box-sizing: border-box;
     padding: 1rem;
     border-radius: 20px 20px 20px 20px;
 }
@@ -184,7 +174,6 @@ button {
     font-family: 'Gemunu Libre';
     font-weight: 500;
     font-size: 24px;
-    color: white;
     text-decoration: none;
     cursor: pointer;
     padding: 10px 20px;
@@ -201,28 +190,6 @@ button {
 .meny {
     display: none;
 }
-
-/* .navbar a, .navbar button {
-    font-family: 'Gemunu Libre';
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.navbar button {
-    padding: 10px 25px;
-    background-color: #262626;
-    border-radius: 50px;
-    border: none;
-    color: white;
-}
-
-.nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
-} */
 
 .bottom-navbar {
     display: flex;
