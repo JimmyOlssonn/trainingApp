@@ -23,7 +23,7 @@
     } else { // If no user is logged in
       echo '
         <button onclick="toggleLoginModal()">Logga in</button>
-        <button onclick="toggleRegModal()">Registrera</button>
+        <a href="/trainingApp/register/"><button>Registrera</button></a>
         ';
     }
     ?>

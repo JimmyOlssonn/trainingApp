@@ -157,47 +157,6 @@ try {
     </div>
 
     <div id="register-modal" class="modal">
-        <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register">
-            <h2>Registrera dig</h2>
-            <label for="firstName">Firstname</label>
-            <input type="text" name="regForname" class="half" required>
-            <label for="lastName">Lastname</label>
-            <input type="text" name="regLastname" class="half" placeholder="" value="" required>
-            <label for="username">Username</label>
-            <input type="text" name="regUsername" placeholder="Username" required>
-            <label for="regEmail">Email</label>
-            <input type="email" name="regEmail" placeholder="example@example.com" required>
-            <label for="regPassword">Password</label>
-            <input type="password" name="regPassword" required>
-
-            <label for="Gender">Gender</label><br>
-            <div>
-                <input type="radio" name="regGender" id="regGender1" value="Male">
-                <label for="regGender1">Male</label>
-            </div>
-            <div>
-                <input type="radio" name="regGender" id="regGender2" value="Female">
-                <label for="regGender2">Female</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input type="radio" name="regGender" id="regGender3" value="Other">
-                <label for="regGender3">Other</label>
-            </div>
-            <label for="regCity">City <span class="text-muted">(Optional)</span></label>
-            <input type="text" name="regCity" placeholder="" value="">
-
-            <label for="regCountry">Country <span class="text-muted">(Optional)</span></label>
-            <input type="text" name="regCountry" placeholder="" value="">
-
-            <label for="regMembership">Membership</label>
-            <select class="form-select" name="regMembership" required>
-                <option value="Free">Free</option>
-                <option value="Pro">Pro</option>
-                <option value="Elite">Elite</option>
-            </select>
-
-            <button type="button">Stäng</button>
-            <button type="submit">Registrera</button>
-        </form>
+        
     </div>
 </body>
