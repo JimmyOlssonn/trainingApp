@@ -2,7 +2,7 @@
 * {
     box-sizing: border-box;
 }
-
+/* General CSS */
 body {
     padding: 0%;
     margin: 0%;
@@ -17,6 +17,13 @@ a {
 section {
     background-color: white;
 }
+
+.gap {
+    height: 5vh;
+    width: 100%;
+}
+
+/* Big containers */
 
 .full-container {
     height: 100vh;
@@ -39,6 +46,8 @@ section {
     box-sizing: border-box;
     display: block;
 }
+
+/* Smaller and flex/grid containers */
 
 .box-container {
     width: 100%;
@@ -73,6 +82,8 @@ section {
     padding: 100px 0px 100px 0px;
 }
 
+/* grid settings */
+
 .grid-2 {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 4rem;
@@ -89,10 +100,7 @@ section {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.gap {
-    height: 5vh;
-    width: 100%;
-}
+/* columns */
 
 .column-lg {
     width: 50%;
@@ -108,6 +116,8 @@ section {
     padding: 1rem;
     border-radius: 20px 20px 20px 20px;
 }
+
+/* titles */
 
 .title1 {
     text-align: center;
@@ -137,6 +147,8 @@ section {
     font-family: 'Gemunu Libre';
     font-size: 30px;
 }
+
+/* navbar */
 
 .navbar {
     display: flex;
@@ -178,6 +190,8 @@ section {
     padding: 0px 20px;
 }
 
+/* modal */
+
 .modal {
     left: 35%;
     position: absolute;
@@ -189,6 +203,8 @@ section {
     border-radius: 10px;
     display: none;
 }
+
+/* pricing table */
 
 .pricing table {
     width: 100%;
@@ -220,6 +236,8 @@ section {
     background-color: #262626;
     color: white;
 }
+
+/* media queries */
 
 @media screen and (max-width: 1024px) {
     .auto-container, .half-container {
