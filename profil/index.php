@@ -56,7 +56,7 @@ try {
                 </div>
             </section>
             <section class="auto-container">
-                <h1 class="title3">Lägg till en träning</h1>
+                <h1 class="title-md">Lägg till en träning</h1>
                 <div class="flex-container">
                     <div class="column-50">
                         <div id="map"></div>
@@ -106,7 +106,7 @@ try {
                         </form>
                     </div>
                 </div>
-                <h1 class="title3">Dina träningar</h1>
+                <h1 class="title-md">Dina träningar</h1>
                 <div class="flex-container">
                     <div class="column-50">
                         <div id="map2"></div>

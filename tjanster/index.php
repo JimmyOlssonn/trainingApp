@@ -46,30 +46,30 @@ try {
         include_once("../modal.php"); // includes modal
         ?>
         <section class="auto-container">
-            <h2 class="title1">Tjänster</h2>
+            <h2 class="title-lg title-center">Tjänster</h2>
             <div id="service" class="flex-container">
                 <div class="column-33 column-services">
-                    <h2 class="title1"><i class="far fa-clock"></i></h2>
+                    <h2 class="title-md title-center"><i class="far fa-clock"></i></h2>
                     <p>Lägg in dina resultat när du vill! Vilken tid på dygnet som helst. Träna när det passar dig som bäst och ditt egna schema. Sätt upp ditt egna träningschema vecka för vecka för att nå dina mål.</p>
                 </div>
                 <div class="column-33 column-services">
-                    <h2 class="title1"><i class="fas fa-dumbbell"></i></h2>
+                    <h2 class="title-md title-center"><i class="fas fa-dumbbell"></i></h2>
                     <p>Logga dina träningspass och resultat oavsett vilken träning det gäller. Du kan logga dina gympass, springpass, friidrott träningar eller något så simpelt som en promenad.</p>
                 </div>
                 <div class="column-33 column-services">
-                    <h2 class="title1"><i class="fas fa-dollar-sign"></i></h2>
+                    <h2 class="title-md title-center"><i class="fas fa-dollar-sign"></i></h2>
                     <p>Välj det medlemskap som passar dig och din ekonomi bäst! Vill du bara pröve på att logga din träning? välj då gratisversionen utan bindningstid. Du kan se alla erbjudanden och priser uten fliken "Priser" i menyn.</p>
                 </div>
                 <div class="column-33 column-services">
-                    <h2 class="title1"><i class="far fa-calendar-check"></i></h2>
+                    <h2 class="title-md title-center"><i class="far fa-calendar-check"></i></h2>
                     <p>Använd kartan för att logga dina kilometer och din tid! Genom att sätta ut start och slutpunkt kan du logga antal kilometer på din egna tid. Logga när du vill och hur du vill, backa tillbakja och se dina tidigare resultat.</p>
                 </div>
                 <div class="column-33 column-services">
-                    <h2 class="title1"><i class="fas fa-chart-line"></i></h2>
+                    <h2 class="title-md title-center"><i class="fas fa-chart-line"></i></h2>
                     <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat.</p>
                 </div>
                 <div class="column-33 column-services">
-                    <h2 class="title1"><i class="far fa-handshake"></i></h2>
+                    <h2 class="title-md title-center"><i class="far fa-handshake"></i></h2>
                     <p>Välj medlemskap som passar dig och din träning, Beroende på hur aktiv du är. Du väljer helt själv vilket medlemskap som passar dig bäst beroende på över hur lång tid du behöver se loggade resultat. Kanske räcker en vecka? eller behöver du se resultat över det senaste året? se under fliken "Priser" för att läsa om medlemskapen.</p>
                 </div>
             </div>

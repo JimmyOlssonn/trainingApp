@@ -13,7 +13,7 @@ body {
 }
 
 a{
-    color: white;
+    color: black;
 }
 
 p{
@@ -114,10 +114,6 @@ button {
 
 /* columns */
 
-.column-lg {
-    padding: 1rem;
-}
-
 .column-img {
     width: 100%;
 }
@@ -129,7 +125,7 @@ button {
 }
 
 .column-services {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     background-color: #f2f2f2;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
     border-radius: 0.5rem;
@@ -143,40 +139,38 @@ button {
 }
 
 .column-25 {
+    margin-bottom: 2rem;
     width: 24%;
     padding: 1rem;
 }
 
 /* titles */
 
-.title1 {
-    text-align: center;
+.title-lg {
     font-family: 'Gemunu Libre';
     font-size: 60px;
 }
 
-.title2 {
+.title-center{
     text-align: center;
+}
+
+.title-md {
     font-family: 'Gemunu Libre';
     font-size: 50px;
 }
 
-.title3 {
+.title-sm {
     font-family: 'Gemunu Libre';
-    font-size: 50px;
-    margin-bottom: 5px;
+    font-size: 30px;
 }
 
-.title4 {
-    text-align: center;
+.title-xs {
     font-size: 20px;
     text-decoration: none;
 }
 
-.title5 {
-    font-family: 'Gemunu Libre';
-    font-size: 30px;
-}
+
 
 /* navbar */
 

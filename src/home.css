@@ -36,6 +36,10 @@ body {
     color: white !important;
 }
 
+#home a{
+    color:white
+}
+
 .navbar{
     background-color: transparent;
 }

@@ -46,7 +46,7 @@ try {
     ?>
     <section class="auto-contianer">
         <div class="register-container">
-            <h2 class="title3">Registrera dig</h2>
+            <h2 class="title-md">Registrera dig</h2>
             <p>Obligatoriska fält *</p>
             <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register">
                 <div class="row">

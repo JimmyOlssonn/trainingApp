@@ -52,18 +52,18 @@ try {
     <section id="home" class="full-container">
         <div></div>
         <div>
-            <h1 class="title1">trainingApp</h1>
-            <h1 class="title4">Börja din träning med oss</h1>
+            <h1 class="title-lg title-center">trainingApp</h1>
+            <h1 class="title-xs title-center">Börja din träning med oss</h1>
         </div>
         <div class="bottom-navbar">
-            <p><a href="https://jimmy.skatens.se" class="title4">@Jimmy Olsson</a></p>
-            <p class="title4">Bild av <a href="https://pixabay.com/sv/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1840437">Pexels</a> från <a href="https://pixabay.com/sv/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1840437">Pixabay</a></h1>
+            <p><a href="https://jimmy.skatens.se" class="title-xs">@Jimmy Olsson</a></p>
+            <p class="title-xs">Bild av <a href="https://pixabay.com/sv/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1840437">Pexels</a> från <a href="https://pixabay.com/sv/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1840437">Pixabay</a></h1>
         </div>
 
     </section>
 
     <section id="about" class="auto-container">
-        <h2 class="title3">Börja din tränining idag!</h2>
+        <h2 class="title-md">Börja din tränining idag!</h2>
         <div class="flex-container">
             <div class="column-50">
                 <p>TrainingingApp är ett enkelt sätt att logga din träning med olika verktyg och tjänster som vi erbjuder. Logga din träning i form av minnesnoteringar, kilometer, tid och se dina resultat i ett diagram för att nå dina mål. Du kan även välja mellan medlemskapen för att se vilka features du vill ha, kanske vill du bara logga för att hålla koll den senaste veckan eller ett helt år? du väljer själv! </p>
@@ -82,21 +82,21 @@ try {
         <div class="flex-container">
             <div id="services1" class="column-33 column-services">
                 <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
-                <h2 class="title5">Logga dina träningar i en karta!</h2>
+                <h2 class="title-sm">Logga dina träningar i en karta!</h2>
                 <p>Använd kartan för att logga dina kilometer och din tid! Genom att sätta ut start och slutpunkt kan du logga antal kilometer på din egna tid.</p>
             </div>
             <div id="services2" class="column-33 column-services">
                 <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
-                <h2 class="title5">Se dina resultat i ett diagram</h2>
+                <h2 class="title-sm">Se dina resultat i ett diagram</h2>
                 <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat.</p>
             </div>
             <div id="services3" class="column-33 column-services">
                 <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
-                <h2 class="title5">TrainingApp fungerar på alla plattformar</h2>
+                <h2 class="title-sm">TrainingApp fungerar på alla plattformar</h2>
                 <p>Ladda ner vår app på din mobil och surfplatta eller logga in direkt i webbläsaren.</p>
             </div>
         </div>
-        <p class="title4">Se me om våra <a href="/trainingApp/tjanster/">Tjänster</a></p>
+        <p class="title-xs title-center">Se me om våra <a href="/trainingApp/tjanster/">Tjänster</a></p>
     </section>
 
     <!-- <section id="diagram" class="auto-container">
@@ -107,7 +107,7 @@ try {
 
     <section id="price" class="auto-container">
 
-        <h1 class="title2">Medlemskap</h1>
+        <h1 class="title-md">Medlemskap</h1>
         <div class="pricing">
             <table>
                 <thead>
@@ -140,7 +140,7 @@ try {
                     </tr>
                 </tbody>
             </table>
-            <p class="title4">Prova logga dina resultat gratis i 3 månader genom att registrera dig!</p>
+            <p class="title-xs title-center">Prova logga dina resultat gratis i 3 månader genom att registrera dig!</p>
         </div>
     </section>
 

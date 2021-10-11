@@ -46,31 +46,31 @@ try {
             include_once("../modal.php"); // includes modal
         ?>
         <section class="auto-container">
-            <h1 class="title2">Medlemskap</h1>
+            <h1 class="title-lg title-center">Medlemskap</h1>
             <div id="prices" class="flex-container">
                 <div class="column-25 column-services">
-                    <h2 class="title5">Medlemskap Free</h2>
+                    <h2 class="title-sm">Medlemskap Free</h2>
                     <ul>
                         <li>Lägga till 10 träningar i veckan</li>
                         <li>Se diagram för en vecka bakåt</li>
                     </ul>
                 </div>
                 <div class="column-25 column-services">
-                    <h2 class="title5">Medlemskap Pro</h2>
+                    <h2 class="title-sm">Medlemskap Pro</h2>
                     <ul>
                         <li>Lägga till 30 träningar i veckan</li>
                         <li>Se diagram för en månad bakåt</li>
                     </ul>
                 </div>
                 <div class="column-25 column-services">
-                    <h2 class="title5">Medlemskap Elite</h2>
+                    <h2 class="title-sm">Medlemskap Elite</h2>
                     <ul>
                         <li>Lägga till 50 träningar i veckan</li>
                         <li>Se diagram för en månad bakåt</li>
                     </ul>
                 </div>
                 <div class="column-25 column-services">
-                    <h2 class="title5">Medlemskap VIP <i class="fas fa-gem fa-sm"></i></h2>
+                    <h2 class="title-sm">Medlemskap VIP <i class="fas fa-gem fa-sm"></i></h2>
                     <ul>
                         <li>Lägga till oändligt med träningar i veckan</li>
                         <li>Se diagram för ett år tillbaka</li>
@@ -110,7 +110,7 @@ try {
                         </tr>
                     </tbody>
                 </table>
-                <p class="title4">Prova logga dina resultat gratis i 3 månader genom att registrera dig!</p>
+                <p class="title-xs title-center">Prova logga dina resultat gratis i 3 månader genom att registrera dig!</p>
             </div>
         </section>
     </section>
