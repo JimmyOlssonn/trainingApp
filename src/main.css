@@ -283,21 +283,21 @@ button {
     .navbar a {
         margin: 0px;
     }
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
     .modal {
         left: 10%;
         width: 80%;
+    }
+    .column-33 {
+        width: 48%;
+    }
+    .column-25 {
+        width: 48%;
     }
 }
 
 @media screen and (max-width: 768px) {
     #map {
         height: 300px !important;
-    }
-    .grid-container {
-        grid-template-columns: 1fr;
     }
     .navbar:not(.meny) {
         background-color: #262626 !important;
@@ -338,6 +338,9 @@ button {
         width: 100%;
     }
     .column-33 {
+        width: 100%;
+    }
+    .column-25 {
         width: 100%;
     }
 }
