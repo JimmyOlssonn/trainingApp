@@ -11,10 +11,12 @@ var map2;
 var markers = []; // store the start and end-points markers
 var marker;
 
+
+
 function startUp() { // body onload function
     mapStart();
     showRunsDiagram();
-    showAllRuns()
+    showAllRuns();
     // $.ajax({
     //     type: "GET",
     //     url: "controller.php",
@@ -105,9 +107,13 @@ function changeMarkerType(newType) { // Change the varible markerType and change
         id1 = "endPoint";
         id2 = "startPoint";
     }
-    document.getElementById(id1).className = "btn btn-primary active";
-    document.getElementById(id2).className = "btn btn-outline-primary";
+    document.getElementById(id1).className = "active";
+    document.getElementById(id2).className = "non-active";
     document.getElementById("markerTypeText").innerHTML = text;
+}
+
+function showRun(value) {
+    console.log("hej");
 }
 
 function showAllRuns() {
@@ -136,7 +142,7 @@ function showAllRuns() {
                 ]).addTo(runsLayer);
 
                 // Add text to the table foreach run
-                text += "<tr><th scope='row'>" + (i + 1) + "</th><td>" + response[i]["type"] + "</td><td>" + response[i]["length"] + " km </td><td>" + response[i]["date"] + "</td></tr>";
+                text += "<tr><th scope='row'>" + (i + 1) + "</th><td>" + response[i]["type"] + "</td><td>" + response[i]["length"] + " km </td><td>" + response[i]["date"] + "</td><td class='hidden'>" + response[i]["startLatitude"] + "</td><td class='hidden'>" + response[i]["startLongitude"] + "</td><td class='hidden'>" + response[i]["stopLatitude"] + "</td><td class='hidden'>" + response[i]["stopLongitude"] + "</td></tr>";
             }
             table.innerHTML = text;
         }
@@ -181,6 +187,3 @@ function showRunsDiagram() {
     });
 }
 
-// $(document).ready(function () {
-
-// });
