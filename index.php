@@ -46,8 +46,8 @@ try {
 
 <body onload="startUp()">
     <?php
-        include_once("navbar.php"); // includes the navbar
-        include_once("modal.php"); // includes modal
+    include_once("navbar.php"); // includes the navbar
+    include_once("modal.php"); // includes modal
     ?>
     <section id="home" class="full-container">
         <div></div>
@@ -63,14 +63,14 @@ try {
     </section>
 
     <section id="about" class="auto-container">
-        <h2 class="title3">Om trainingApp</h2>
-        <div class="grid-container grid-2">
-            <div class="column-lg">
+        <h2 class="title3">Börja din tränining idag!</h2>
+        <div class="flex-container">
+            <div class="column-50">
                 <p>TrainingingApp är ett enkelt sätt att logga din träning med olika verktyg och tjänster som vi erbjuder. Logga din träning i form av minnesnoteringar, kilometer, tid och se dina resultat i ett diagram för att nå dina mål. Du kan även välja mellan medlemskapen för att se vilka features du vill ha, kanske vill du bara logga för att hålla koll den senaste veckan eller ett helt år? du väljer själv! </p>
                 <p> Prova logga din träning Gratis i tre månader utan bindningstid.</p>
                 <p> För mer information om våra erbjudanden och medlemskap för din träning, läs mer på fliken "Tjänster" i menyn.</p>
             </div>
-            <div class="column-img">
+            <div class="column-50">
                 <div id="bild1"></div>
             </div>
         </div>
@@ -78,24 +78,19 @@ try {
 
     <div class="gap"></div>
 
-    <section id="maps" class="auto-container">
-        <div class="grid-container grid-2">
-            <div class="column-lg">
-                <h2 class="title3">Logga dina träningar i en karta!</h2>
-                <p>Använd kartan för att logga dina kilometer och din tid! Genom att sätta ut start och slutpunkt kan du logga antal kilometer på din egna tid. Logga när du vill och hur du vill, backa tillbakja och se dina tidigare resultat.</p>
+    <section class="auto-container">
+        <div class="flex-container">
+            <div id="services1" class="column-50 column-services">
+                <h2 class="title5">Logga dina träningar i en karta!</h2>
             </div>
-            <div class="column-lg">
-                <div id="display-map" class="map1"></div>
+            <div id="services2" class="column-50 column-services">
+                <h2 class="title5">Se dina resultat i ett diagram</h2>
             </div>
-        </div>
-
-        <div id="diagram" class="flex-container">
-            <div class="column-flex">
-                <canvas id="display-diagram"></canvas>
+            <div id="services3" class="column-50 column-services">
+                <h2 class="title5">TrainingApp fungerar på alla plattformar så du kan använda den vart du än är</h2>
             </div>
-            <div class="column-flex">
-                <h2 class="title3">Se dina resultat i ett diagram!</h2>
-                <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat.</p>
+            <div id="services4" class="column-50 column-services">
+                <h2 class="title5">Logga dina träningar i en karta!</h2>
             </div>
         </div>
     </section>

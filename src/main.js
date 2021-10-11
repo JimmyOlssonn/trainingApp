@@ -16,8 +16,8 @@ var map;
 var profileDiagram;
 
 function startUp() { // body onload function
-    mapStart();
-    showRunsDiagram();
+    // mapStart();
+    // showRunsDiagram();
 }
 
 function mapStart() {

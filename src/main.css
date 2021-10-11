@@ -16,7 +16,7 @@ a {
     color: white;
 }
 
-h1,h2{
+h1, h2 {
     margin: 1rem;
 }
 
@@ -78,21 +78,16 @@ button {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 100px 0px 100px 0px;
-    margin-bottom: 100px;
+    justify-content: space-between;
+    padding: 50px 0px 50px 0px;
     line-height: 2;
     font-size: 18px;
-    border-top: solid lightgray 1px;
-    border-bottom: solid lightgray 1px;
 }
 
 .grid-container {
     display: grid;
     grid-gap: 1rem;
-    margin-bottom: 100px;
-    border-top: solid lightgray 1px;
-    border-bottom: solid lightgray 1px;
-    padding: 100px 0px 100px 0px;
+    padding: 50px 0px 50px 0px;
 }
 
 /* grid settings */
@@ -119,8 +114,25 @@ button {
     padding: 1rem;
 }
 
-.column-flex {
-    width: 50%;
+.column-img {
+    border-radius: 20px 20px 20px 20px;
+}
+
+.column-50 {
+    width: 48%;
+    padding: 1rem;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.column-services {
+    margin-top: 2rem;
+    background-color: #f2f2f2;
+    height: 20rem;
+    padding: 1rem;
+    border-radius: 20px 20px 20px 20px;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
 }
 
 .column {
@@ -261,7 +273,7 @@ button {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    .modal{
+    .modal {
         left: 10%;
         width: 80%;
     }
@@ -291,26 +303,25 @@ button {
     .meny a {
         display: block !important;
     }
-    .modal{
+    .modal {
         left: 2%;
         width: 96%;
     }
     .register-container {
         padding: 0px !important;
     }
-    .flex-content{
+    .flex-content {
         flex-wrap: wrap;
     }
     .sidebar-container {
         width: 100% !important;
         height: auto !important;
-        
     }
-    .sidebar a{
+    .sidebar a {
         font-size: 14px !important;
         padding: 5px !important;
     }
-    .column-flex{
+    .column-50 {
         width: 100%;
     }
 }
