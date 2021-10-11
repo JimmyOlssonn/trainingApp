@@ -12,17 +12,12 @@ body {
     font-weight: bold;
 }
 
-#home a {
+a{
     color: white;
 }
 
 p{
     font-size: 16px;
-    color: #262626;
-}
-
-a{
-    color: #262626;
 }
 
 h1, h2 {
@@ -150,7 +145,6 @@ button {
 .column-25 {
     width: 24%;
     padding: 1rem;
-    border-radius: 20px 20px 20px 20px;
 }
 
 /* titles */
@@ -260,18 +254,17 @@ button {
 .pricing th {
     color: #262626 !important;
     text-align: left;
-    background-color: rgb(242, 242, 242, 1);
+    background-color: rgb(242, 242, 242, 0.1);
     padding-top: 12px;
     padding-bottom: 12px;
 }
 
 .pricing tr:nth-child(even) {
-    background-color: rgb(242, 242, 242, 1);
+    background-color: rgb(242, 242, 242, 0.1);
 }
 
 .pricing tr:nth-child(odd) {
-    background-color: #262626;
-    color: white;
+    background-color: rgb(242, 242, 242, 1);
 }
 
 /* media queries */
