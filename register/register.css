@@ -4,9 +4,7 @@
     max-width: 800px;
     padding: 20px 100px;
     background-color: #f2f2f2;
-    border-top: solid black 1px;
-    border-bottom: solid black 1px;
-    box-shadow: 5px 5px 20px #8c8c8c;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
 }
 
 .column-half {

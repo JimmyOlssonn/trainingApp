@@ -80,19 +80,23 @@ try {
 
     <section class="auto-container">
         <div class="flex-container">
-            <div id="services1" class="column-50 column-services">
+            <div id="services1" class="column-33 column-services">
+                <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
                 <h2 class="title5">Logga dina träningar i en karta!</h2>
+                <p>Använd kartan för att logga dina kilometer och din tid! Genom att sätta ut start och slutpunkt kan du logga antal kilometer på din egna tid.</p>
             </div>
-            <div id="services2" class="column-50 column-services">
+            <div id="services2" class="column-33 column-services">
+                <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
                 <h2 class="title5">Se dina resultat i ett diagram</h2>
+                <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat.</p>
             </div>
-            <div id="services3" class="column-50 column-services">
-                <h2 class="title5">TrainingApp fungerar på alla plattformar så du kan använda den vart du än är</h2>
-            </div>
-            <div id="services4" class="column-50 column-services">
-                <h2 class="title5">Logga dina träningar i en karta!</h2>
+            <div id="services3" class="column-33 column-services">
+                <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
+                <h2 class="title5">TrainingApp fungerar på alla plattformar</h2>
+                <p>Ladda ner vår app på din mobil och surfplatta eller logga in direkt i webbläsaren.</p>
             </div>
         </div>
+        <p class="title4">Se me om våra <a href="/trainingApp/tjanster/">Tjänster</a></p>
     </section>
 
     <!-- <section id="diagram" class="auto-container">

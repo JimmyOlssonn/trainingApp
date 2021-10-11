@@ -12,8 +12,17 @@ body {
     font-weight: bold;
 }
 
-a {
+#home a {
     color: white;
+}
+
+p{
+    font-size: 16px;
+    color: #262626;
+}
+
+a{
+    color: #262626;
 }
 
 h1, h2 {
@@ -62,7 +71,7 @@ button {
 .auto-container {
     min-height: 70vh;
     width: 100%;
-    padding: 100px 150px;
+    padding: 100px 7%;
     display: block;
 }
 
@@ -115,28 +124,31 @@ button {
 }
 
 .column-img {
-    border-radius: 20px 20px 20px 20px;
+    width: 100%;
 }
 
 .column-50 {
     width: 48%;
     padding: 1rem;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 0.5rem;
 }
 
 .column-services {
     margin-top: 2rem;
     background-color: #f2f2f2;
-    height: 20rem;
-    padding: 1rem;
-    border-radius: 20px 20px 20px 20px;
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+    border-radius: 0.5rem;
 }
 
-.column {
-    background-color: rgb(198, 217, 236, 0.3);
+.column-33 {
+    margin-bottom: 2rem;
+    width: 32%;
+    padding: 1rem;
+    /* background-color: rgb(198, 217, 236, 0.3); */
+}
+
+.column-25 {
+    width: 24%;
     padding: 1rem;
     border-radius: 20px 20px 20px 20px;
 }
@@ -193,6 +205,7 @@ button {
     text-decoration: none;
     cursor: pointer;
     padding: 10px 20px;
+    color:white;
 }
 
 .icon {
@@ -322,6 +335,9 @@ button {
         padding: 5px !important;
     }
     .column-50 {
+        width: 100%;
+    }
+    .column-33 {
         width: 100%;
     }
 }
