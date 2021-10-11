@@ -46,7 +46,7 @@ try {
         include_once("../navbar.php"); // includes the navbar   
         include_once("../modal.php"); // includes modal
         ?>
-        <section class="flex-content">
+        <section class="flex-wrapper">
             <section class="sidebar-container">
                 <div class="sidebar">
                     <a>Profil</a>
@@ -56,15 +56,15 @@ try {
                 </div>
             </section>
             <section class="auto-container">
-                <h1 class="title3">Add new run</h1>
-                <div class="grid-container grid-2">
-                    <div>
+                <h1 class="title3">Lägg till en träning</h1>
+                <div class="flex-container">
+                    <div class="column-50">
                         <div id="map"></div>
                         <button id="startPoint" type="button" onclick="changeMarkerType('start')">Start-point</button>
                         <button id="endPoint" type="button" onclick="changeMarkerType('stop')">End-point</button>
                         <label id="markerTypeText">You are now placing a start marker</label>
                     </div>
-                    <div>
+                    <div class="column-50">
                         <form action="<?php echo htmlspecialchars("../controller.php"); ?>" method="post" name="addRun">
                             <div class="row">
                                 <div>
@@ -106,12 +106,12 @@ try {
                         </form>
                     </div>
                 </div>
-                <h1 class="title3">Your runs</h1>
-                <div class="grid-container grid-2">
-                    <div>
+                <h1 class="title3">Dina träningar</h1>
+                <div class="flex-container">
+                    <div class="column-50">
                         <div id="map2"></div>
                     </div>
-                    <div>
+                    <div class="column-50">
                         <table>
                             <thead>
                                 <tr>
@@ -125,10 +125,12 @@ try {
 
                             </tbody>
                         </table>
-                        <button type="submit" onclick="showAllRuns()">Mina runs!</button>
                     </div>
                 </div>
-                <canvas id="profileDiagram"></canvas>
+                <div class="box-container">
+                    <canvas id="profileDiagram"></canvas>
+                </div>
+
             </section>
         </section>
 

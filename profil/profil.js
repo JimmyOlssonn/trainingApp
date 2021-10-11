@@ -14,6 +14,7 @@ var marker;
 function startUp() { // body onload function
     mapStart();
     showRunsDiagram();
+    showAllRuns()
     // $.ajax({
     //     type: "GET",
     //     url: "controller.php",
