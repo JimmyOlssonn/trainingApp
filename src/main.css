@@ -246,7 +246,7 @@ button:hover{
 
 .modal {
     left: 35%;
-    position: absolute;
+    position: fixed;
     box-sizing: border-box;
     padding: 50px;
     width: 30%;
