@@ -69,7 +69,7 @@ try {
                 <h2 class="title-md">Börja din tränining idag!</h2>
                 <p>TrainingingApp är ett enkelt sätt att logga din träning med olika verktyg och tjänster som vi erbjuder. Logga din träning i form av minnesnoteringar, kilometer, tid och se dina resultat i ett diagram för att nå dina mål. Du kan även välja mellan medlemskapen för att se vilka features du vill ha, kanske vill du bara logga för att hålla koll den senaste veckan eller ett helt år? du väljer själv! </p>
                 <p> Prova logga din träning Gratis i tre månader utan bindningstid.</p>
-                <p> För mer information om våra erbjudanden och medlemskap för din träning, läs mer på fliken "Tjänster" i menyn.</p>
+                <p> För mer information om våra erbjudanden och medlemskap för din träning, läs mer om våra <a href="/trainingApp/tjanster/">Tjänster</a></p>
                 <button>Börja idag!</button>
             </div>
             <div class="column-50">
@@ -99,7 +99,7 @@ try {
                 <p>Ladda ner vår app på din mobil och surfplatta eller logga in direkt i webbläsaren.</p>
             </div>
         </div>
-        <p class="title-xs title-center">Se me om våra <a href="/trainingApp/tjanster/">Tjänster</a></p>
+        <p class="title-xs title-center">Se mer om våra <a href="/trainingApp/tjanster/">Tjänster</a></p>
     </section>
 
     <!-- <section id="diagram" class="auto-container">
