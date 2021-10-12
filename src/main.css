@@ -339,13 +339,18 @@ button:hover{
     .flex-wrapper {
         flex-wrap: wrap;
     }
-    .sidebar-container {
+    .sidebar-container{
         width: 100% !important;
         height: auto !important;
     }
+    .sidebar {
+        position: relative !important;
+        width: 100% !important;
+    }
     .sidebar a {
         font-size: 14px !important;
-        padding: 5px !important;
+        padding: 8px !important;
+        width: 100% !important;
     }
     .column-50 {
         width: 100%;

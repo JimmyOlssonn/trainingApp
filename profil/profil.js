@@ -119,7 +119,7 @@ function showRun(value) {
 function showAllRuns() {
     $.ajax({
         type: "GET",
-        url: "/trainingApp/shared/controller.php",
+        url: "../shared/controller.php",
         data: "getRuns",
         dataType: "json",
         success: function (response) {
@@ -152,7 +152,7 @@ function showAllRuns() {
 function showRunsDiagram() {
     $.ajax({
         type: "GET",
-        url: "/trainingApp/shared/controller.php",
+        url: "../shared/controller.php",
         data: "getRunsDiagram",
         dataType: "json",
         success: function (response) {
@@ -191,7 +191,7 @@ function changeDiagram() {
 
     $.ajax({
         type: "GET",
-        url: "/trainingApp/controller.php",
+        url: "../shared/controller.php",
         data: "getRunsDiagram",
         dataType: "json",
         success: function (response) {

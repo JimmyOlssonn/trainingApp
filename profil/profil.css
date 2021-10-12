@@ -39,15 +39,17 @@
 }
 
 .sidebar{
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 14rem;
 }
 
 .sidebar a{
     text-align: center;
     width: 80%;
-    padding: 70px 14px;
+    padding: 30px 14px;
     font-size: 22px;
     border-bottom: solid gray 0.5px;
     cursor: pointer;
@@ -62,16 +64,16 @@
 
 table {
     width: 100%;
-    background-color: white;
-    border-top: solid #262626 1px;
-    border-bottom: solid #262626 1px;
+    background-color: #262626;
+    border-top: solid #99ff99 1px;
+    border-bottom: solid #99ff99 1px;
 }
 
 td, th {
-    border: 1px solid #ddd;
     padding: 2px;
     font-size: 16px;
     font-weight: bold;
+    background-color: #404040;
 }
 
 .hidden{
