@@ -43,8 +43,8 @@ try {
 <body onload="startUp()">
     <section>
         <?php
-        include_once("../navbar.php"); // includes the navbar   
-        include_once("../modal.php"); // includes modal
+        include_once("../shared/navbar.php"); // includes the navbar   
+        include_once("../shared/modal.php"); // includes modal
         ?>
         <section class="flex-wrapper">
             <section class="sidebar-container">
@@ -74,7 +74,7 @@ try {
                         <label id="markerTypeText">You are now placing a start marker</label>
                     </div>
                     <div class="column-50">
-                        <form action="<?php echo htmlspecialchars("../controller.php"); ?>" method="post" name="addRun">
+                        <form action="<?php echo htmlspecialchars("../shared/controller.php"); ?>" method="post" name="addRun">
                             <div class="row">
                                 <div>
                                     <div>

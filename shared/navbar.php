@@ -15,7 +15,7 @@
   if (isset($_SESSION['Username'])) { // If a user is logged in
     echo '
         <a href="/trainingApp/profil/">Profil</a>
-        <a href="/trainingApp/logout.php">Logga ut</a>
+        <a href="/trainingApp/shared/logout.php">Logga ut</a>
           ';
   } else { // If no user is logged in
     echo '

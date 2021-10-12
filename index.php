@@ -46,8 +46,8 @@ try {
 
 <body onload="startUp()">
     <?php
-    include_once("navbar.php"); // includes the navbar
-    include_once("modal.php"); // includes modal
+    include_once("shared/navbar.php"); // includes the navbar
+    include_once("shared/modal.php"); // includes modal
     ?>
     <section id="home" class="full-container">
         <div></div>

@@ -42,8 +42,8 @@ try {
 <body>
     <section>
         <?php
-        include_once("../navbar.php"); // includes the navbar
-        include_once("../modal.php"); // includes modal
+        include_once("../shared/navbar.php"); // includes the navbar
+        include_once("../shared/modal.php"); // includes modal
         ?>
         <section class="auto-container container-dark">
             <h2 class="title-lg title-center">Tjänster</h2>

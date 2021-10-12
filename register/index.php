@@ -41,14 +41,14 @@ try {
 
 <body>
     <?php
-        include_once("../navbar.php"); // includes the navbar   
-        include_once("../modal.php"); // includes modal
+        include_once("../shared/navbar.php"); // includes the navbar   
+        include_once("../shared/modal.php"); // includes modal
     ?>
     <section class="full-container container-dark">
         <div class="register-container column-services">
             <h2 class="title-md">Registrera dig</h2>
             <p>Obligatoriska fält *</p>
-            <form action="<?php echo htmlspecialchars("controller.php"); ?>" method="post" name="register">
+            <form action="<?php echo htmlspecialchars("../shared/controller.php"); ?>" method="post" name="register">
                 <div class="row">
                     <div class="column-half">
                         <label for="firstName">Förnamn*</label>
