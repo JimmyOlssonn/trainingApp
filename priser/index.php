@@ -70,7 +70,7 @@ try {
                     </ul>
                 </div>
                 <div class="column-25 column-services">
-                    <h2 class="title-sm">Medlemskap VIP <i class="fas fa-gem fa-sm"></i></h2>
+                    <h2 class="title-sm">Medlemskap VIP <i class="fas fa-gem fa-sm text-green"></i></h2>
                     <ul>
                         <li>Lägga till oändligt med träningar i veckan</li>
                         <li>Se diagram för ett år tillbaka</li>
