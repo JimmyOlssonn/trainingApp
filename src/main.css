@@ -249,10 +249,11 @@ button:hover{
     padding: 50px;
     width: 30%;
     top: 10%;
-    background-color: white;
+    background-color: #262626;
     border-radius: 10px;
     display: none;
     box-shadow: 5px 5px 20px #262626;
+    color:white;
 }
 
 /* pricing table */
