@@ -85,7 +85,7 @@ $(window).on('scroll resize', function () {
         $('#navbar').css("background-color", "transparent");
     }
     else {
-        $('#navbar').css("background-color", "#262626");
+        $('#navbar').css("background-color", "#333333");
     }
 });
 

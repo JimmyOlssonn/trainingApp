@@ -13,7 +13,7 @@ body {
 }
 
 a{
-    color: black;
+    color: #99ff99;
 }
 
 p{
@@ -21,7 +21,7 @@ p{
 }
 
 h1, h2 {
-    margin: 1rem;
+    margin: 1rem 0rem;
 }
 
 section {
@@ -42,11 +42,18 @@ input[type=text], input[type=password], input[type=email], select, input[type=da
 
 button {
     padding: 14px 25px;
-    background-color: #262626;
+    background-color: #99ff99;
     border: none;
     border-radius: 50px;
-    color: white;
+    color: #262626;
     font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #262626;
+    color:white;
 }
 
 /* Big containers */
@@ -68,6 +75,12 @@ button {
     width: 100%;
     padding: 100px 7%;
     display: block;
+    
+}
+
+.container-dark{
+    background-color: #262626;
+    color: white;
 }
 
 /* Smaller and flex/grid containers */
@@ -84,8 +97,9 @@ button {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 50px 0px 50px 0px;
-    line-height: 2;
+    line-height: 1.5;
     font-size: 18px;
+    border-top: solid 3px #99ff99;
 }
 
 .grid-container {
@@ -126,7 +140,7 @@ button {
 
 .column-services {
     margin-bottom: 2rem;
-    background-color: #f2f2f2;
+    background-color: #404040;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
     border-radius: 0.5rem;
 }
@@ -145,6 +159,11 @@ button {
 }
 
 /* titles */
+
+.title-xl {
+    font-family: 'Gemunu Libre';
+    font-size: 70px;
+}
 
 .title-lg {
     font-family: 'Gemunu Libre';
@@ -183,7 +202,7 @@ button {
     left: 0;
     right: 0;
     z-index: 100000;
-    background-color: #262626;
+    background-color: #404040;
 }
 
 .navbar a {
@@ -196,6 +215,10 @@ button {
     color:white;
 }
 
+.navbar a:hover {
+    background-color: #262626;
+    color:#99ff99;
+}
 .icon {
     display: none;
 }
@@ -233,32 +256,30 @@ button {
 
 .pricing table {
     width: 100%;
-    background-color: white;
-    border-top: solid #262626 1px;
-    border-bottom: solid #262626 1px;
+    background-color: #404040;
+    border-top: solid #99ff99 1px;
+    border-bottom: solid #99ff99 1px;
 }
 
 .pricing td, .pricing th {
-    border: 1px solid #ddd;
     padding: 20px;
     font-size: 20px;
     font-weight: bold;
 }
 
 .pricing th {
-    color: #262626 !important;
     text-align: left;
-    background-color: rgb(242, 242, 242, 0.1);
+    background-color: #404040;
     padding-top: 12px;
     padding-bottom: 12px;
 }
 
 .pricing tr:nth-child(even) {
-    background-color: rgb(242, 242, 242, 0.1);
+    background-color: #404040;
 }
 
 .pricing tr:nth-child(odd) {
-    background-color: rgb(242, 242, 242, 1);
+    background-color: #262626;
 }
 
 /* media queries */
@@ -329,5 +350,11 @@ button {
     }
     .column-25 {
         width: 100%;
+    }
+    .pricing td, .pricing th {
+        border: 1px solid #ddd;
+        padding: 6px;
+        font-size: 16px;
+        font-weight: bold;
     }
 }

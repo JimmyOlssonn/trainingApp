@@ -45,7 +45,7 @@ try {
             include_once("../navbar.php"); // includes the navbar   
             include_once("../modal.php"); // includes modal
         ?>
-        <section class="auto-container">
+        <section class="auto-container container-dark">
             <h1 class="title-lg title-center">Medlemskap</h1>
             <div id="prices" class="flex-container">
                 <div class="column-25 column-services">

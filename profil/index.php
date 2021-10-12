@@ -55,7 +55,7 @@ try {
                     <a>Inställningar</a>
                 </div>
             </section>
-            <section class="auto-container">
+            <section class="auto-container container-dark">
                 <div class="flex-container">
                     <div class="column-50 column-services">
                         <h1 class="title-md"><?php echo $_SESSION['Forname'] . " " . $_SESSION['Lastname'] ?></h1>

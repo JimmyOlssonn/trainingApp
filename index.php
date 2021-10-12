@@ -52,7 +52,7 @@ try {
     <section id="home" class="full-container">
         <div></div>
         <div>
-            <h1 class="title-lg title-center">trainingApp</h1>
+            <h1 class="title-xl title-center">trainingApp</h1>
             <h1 class="title-xs title-center">Börja din träning med oss</h1>
         </div>
         <div class="bottom-navbar">
@@ -62,13 +62,15 @@ try {
 
     </section>
 
-    <section id="about" class="auto-container">
-        <h2 class="title-md">Börja din tränining idag!</h2>
+    <section id="about" class="auto-container container-dark">
+
         <div class="flex-container">
             <div class="column-50">
+                <h2 class="title-md">Börja din tränining idag!</h2>
                 <p>TrainingingApp är ett enkelt sätt att logga din träning med olika verktyg och tjänster som vi erbjuder. Logga din träning i form av minnesnoteringar, kilometer, tid och se dina resultat i ett diagram för att nå dina mål. Du kan även välja mellan medlemskapen för att se vilka features du vill ha, kanske vill du bara logga för att hålla koll den senaste veckan eller ett helt år? du väljer själv! </p>
                 <p> Prova logga din träning Gratis i tre månader utan bindningstid.</p>
                 <p> För mer information om våra erbjudanden och medlemskap för din träning, läs mer på fliken "Tjänster" i menyn.</p>
+                <button>Börja idag!</button>
             </div>
             <div class="column-50">
                 <div id="bild1"></div>
@@ -78,7 +80,8 @@ try {
 
     <div class="gap"></div>
 
-    <section class="auto-container">
+    <section class="auto-container container-dark">
+        <h2 class="title-md title-center">Allt du behöver i en app</h2>
         <div class="flex-container">
             <div id="services1" class="column-33 column-services">
                 <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
@@ -105,9 +108,9 @@ try {
 
     <div class="gap"></div>
 
-    <section id="price" class="auto-container">
+    <section id="price" class="auto-container container-dark">
 
-        <h1 class="title-md">Medlemskap</h1>
+        <h1 class="title-md title-center">Medlemskap</h1>
         <div class="pricing">
             <table>
                 <thead>
