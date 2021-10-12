@@ -66,7 +66,7 @@ try {
                     </div>
                 </div>
                 <h1 class="title-md">Lägg till en träning</h1>
-                <div class="flex-container">
+                <div class="flex-container column-services">
                     <div class="column-50">
                         <div id="map"></div>
                         <button id="startPoint" type="button" onclick="changeMarkerType('start')">Start-point</button>
@@ -116,7 +116,7 @@ try {
                     </div>
                 </div>
                 <h1 class="title-md">Dina träningar</h1>
-                <div class="flex-container">
+                <div class="flex-container column-services">
                     <div class="column-50">
                         <div id="map2"></div>
                     </div>

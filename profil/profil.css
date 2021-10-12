@@ -29,7 +29,7 @@
 }
 
 .active{
-    background-color: #262626;
+    background-color: #99ff99;
 }
 
 .non-active{
@@ -57,7 +57,7 @@
     padding-top: 46px;
     width: 18rem;
     z-index: 10;
-    background-color: #262626;
+    background-color: #404040;
 }
 
 table {
