@@ -186,4 +186,49 @@ function showRunsDiagram() {
         }
     });
 }
+var profileDiagram;
+function changeDiagram() {
+
+    $.ajax({
+        type: "GET",
+        url: "/trainingApp/controller.php",
+        data: "getRunsDiagram",
+        dataType: "json",
+        success: function (response) {
+            var value = document.getElementById("changeType").value;
+            var lengths = [];
+            var dates = [];
+            for (var i = 0; i < response.length; i++) {
+                if (response[i]["type"] === value) {
+                    lengths.push(parseInt(response[i]["length"], 10));
+                    dates.push(response[i]["date"]);
+                }
+            }
+            if(profileDiagram) profileDiagram.destroy();
+            var ctx = document.getElementById('profileDiagram2');
+            const config = {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Your latest runs',
+                        data: lengths,
+                        fill: false,
+                        borderColor: '#39A2DB',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            }
+            profileDiagram = new Chart(ctx, config);
+            
+        }
+    });
+}
 

@@ -136,8 +136,19 @@ try {
                         </table>
                     </div>
                 </div>
-                <div class="box-container">
-                    <canvas id="profileDiagram"></canvas>
+                <div class="flex-container">
+                    <div class="column-50 column-services">
+                        <canvas id="profileDiagram2"></canvas>
+                    </div>
+                    <div class="column-50 column-services">
+                        <label>Typ av träning</label>
+                        <select id="changeType" name="changeType" onchange="changeDiagram()">
+                            <option value="Promenad">Promenad</option>
+                            <option value="Löpning">Löpning</option>
+                            <option value="Cykling">Cykling</option>
+                            <option value="Skidor">Skidor</option>
+                        </select>
+                    </div>
                 </div>
 
             </section>
