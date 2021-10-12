@@ -160,7 +160,7 @@ function showRunsDiagram() {
             var dates = [];
             for (var i = 0; i < response.length; i++) {
                 lengths.push(parseInt(response[i]["length"], 10));
-                dates.push(response[i]["date"] + " " + response[i]["type"]);
+                dates.push(response[i]["date"]);
             }
             var ctx = document.getElementById('profileDiagram');
             var profileDiagram = new Chart(ctx, {
