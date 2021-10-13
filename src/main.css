@@ -12,11 +12,11 @@ body {
     font-weight: bold;
 }
 
-a{
+a {
     color: #99ff99;
 }
 
-p{
+p {
     font-size: 16px;
 }
 
@@ -52,10 +52,10 @@ button {
     border: solid 2px #99ff99;
 }
 
-button:hover{
+button:hover {
     background-color: #404040;
     border: solid 2px #99ff99;
-    color:white;
+    color: white;
 }
 
 /* Big containers */
@@ -77,10 +77,9 @@ button:hover{
     width: 100%;
     padding: 100px 7%;
     display: block;
-    
 }
 
-.container-dark{
+.container-dark {
     background-color: #262626;
     color: white;
 }
@@ -147,6 +146,24 @@ button:hover{
     border-radius: 0.5rem;
 }
 
+.column-flex {
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 480px;
+    position: relative;
+}
+
+.column-flex p {
+    opacity: 0;
+    position: absolute;
+    bottom:0;
+}
+
+/* .column-flex:hover {
+    box-shadow: inset 0 0 100px #000000;
+} */
+
 .column-33 {
     margin-bottom: 2rem;
     width: 32%;
@@ -158,6 +175,18 @@ button:hover{
     margin-bottom: 2rem;
     width: 24%;
     padding: 1rem;
+}
+
+#services1 {
+    background-image: url("../img/business-g9d226f9a3_1280.png")
+}
+
+#services2 {
+    background-image: url("../img/laptop-ga45fa7c25_1280.png");
+}
+
+#services3 {
+    background-image: url("../img/cellphone-gb13bdccdf_1280.png");
 }
 
 /* titles */
@@ -172,7 +201,7 @@ button:hover{
     font-size: 60px;
 }
 
-.title-center{
+.title-center {
     text-align: center;
 }
 
@@ -191,10 +220,13 @@ button:hover{
     text-decoration: none;
 }
 
-.text-green{
-    color:#99ff99;
+.text-green {
+    color: #99ff99;
 }
 
+.text-red {
+    color: white;
+}
 
 /* navbar */
 
@@ -217,13 +249,14 @@ button:hover{
     text-decoration: none;
     cursor: pointer;
     padding: 10px 20px;
-    color:white;
+    color: white;
 }
 
 .navbar a:hover {
     background-color: #262626;
-    color:#99ff99;
+    color: #99ff99;
 }
+
 .icon {
     display: none;
 }
@@ -255,7 +288,7 @@ button:hover{
     border-radius: 10px;
     display: none;
     box-shadow: 5px 5px 20px #262626;
-    color:white;
+    color: white;
 }
 
 /* pricing table */
@@ -268,7 +301,7 @@ button:hover{
 }
 
 .pricing td, .pricing th {
-    color:white;
+    color: white;
     padding: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -341,7 +374,7 @@ button:hover{
     .flex-wrapper {
         flex-wrap: wrap;
     }
-    .sidebar-container{
+    .sidebar-container {
         width: 100% !important;
         height: auto !important;
     }

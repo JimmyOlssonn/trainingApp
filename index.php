@@ -34,6 +34,8 @@ try {
 
     <script src="https://kit.fontawesome.com/ac232d5325.js" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous"></script>
+
     <title>trainingApp</title>
 
     <link rel="stylesheet" href="src/main.css">
@@ -83,21 +85,19 @@ try {
     <section class="auto-container container-dark">
         <h2 class="title-md title-center">Allt du behöver i en app</h2>
         <div class="flex-container">
-            <div id="services1" class="column-33 column-services">
-                <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
-                <h2 class="title-sm">Logga dina träningar i en karta!</h2>
+            <div id="services1" class="column-33 column-services column-flex" onmouseover="columnMouseover(this)" onmouseleave="columnMouseout(this)">
+                <h2 class="title-md">Kartor</h2>
                 <p>Använd kartan för att logga dina kilometer och din tid! Genom att sätta ut start och slutpunkt kan du logga antal kilometer på din egna tid.</p>
             </div>
-            <div id="services2" class="column-33 column-services">
-                <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
-                <h2 class="title-sm">Se dina resultat i ett diagram</h2>
-                <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat.</p>
-            </div>
-            <div id="services3" class="column-33 column-services">
-                <img class="column-img" src="img/athlete-g9d2b14e2b_1920.jpg">
-                <h2 class="title-sm">TrainingApp fungerar på alla plattformar</h2>
+            <div id="services2" class="column-33 column-services column-flex" onmouseover="columnMouseover(this)" onmouseleave="columnMouseout(this)">
+                <h2 class="title-md">Plattformar</h2>
                 <p>Ladda ner vår app på din mobil och surfplatta eller logga in direkt i webbläsaren.</p>
             </div>
+            <div id="services3" class="column-33 column-services column-flex" onmouseover="columnMouseover(this)" onmouseleave="columnMouseout(this)">
+                <h2 class="title-md">Diagram</h2>
+                <p>Se dina resultat i ett diagram, för bästa översikt över dina egna träningar och resultat.</p>
+            </div>
+            
         </div>
         <p class="title-xs title-center">Se mer om våra <a href="/trainingApp/tjanster/">Tjänster</a></p>
     </section>

@@ -15,6 +15,8 @@ var displayLayer = L.layerGroup();
 var map;
 var profileDiagram;
 
+
+
 function startUp() { // body onload function
     // mapStart();
     // showRunsDiagram();
@@ -89,4 +91,34 @@ $(window).on('scroll resize', function () {
     }
 });
 
+function columnMouseover(target) {
+    anime({
+        targets: target,
+        boxShadow: "inset 0 0 200px black",
+        easing: "linear",
+        duration: 500,
+    });
+    anime({
+        targets: target.querySelector("p"),
+        opacity: 1,
+        easing: "linear",
+        duration: 500,
+    });
+    
+}
+
+function columnMouseout(target) {
+    anime({
+        targets: target,
+        boxShadow: "inset 0 0 0px black",
+        easing: "linear",
+        durataion: 500
+    });
+    anime({
+        targets: target.querySelector("p"),
+        opacity: 0,
+        easing: "linear",
+        duration: 500,
+    });
+}
 
