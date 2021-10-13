@@ -39,7 +39,7 @@ if (isset($_POST["regForname"])) { // Register new User
         ':gender' => $gender,
         ':membership' => $membership
     ]);
-    header("Location:index.php");
+    header("Location:/trainingApp/index.php");
     exit();
 }
 if (isset($_POST["logName"])) { // User login
@@ -171,7 +171,7 @@ if (isset($_POST["changeMembership"])) { // Change membership
         ':membership' => $membership
     ]);
     $_SESSION["Membership"] = $membership;
-    header("Location:profile.php");
+    header("Location:/trainingApp/profil/");
     exit();
 }
 if (isset($_POST["changeEmail"])) { // Change Email and Password
@@ -188,6 +188,6 @@ if (isset($_POST["changeEmail"])) { // Change Email and Password
         ':password' => $password
     ]);
     $_SESSION["Email"] = $email;
-    header("Location:profile.php");
+    header("Location:/trainingApp/profil/");
     exit();
 }
